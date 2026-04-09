@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "mal_id": 10001,
+      "title": "Stellar Odyssey",
+      "synopsis": "When the aurora bridges two worlds, a cosplayer and a pilot rewrite fate. Offline fallback card for demo.",
+      "genres": [{ "name": "Action" }, { "name": "Fantasy" }],
+      "images": {
+        "jpg": {
+          "image_url": "https://cdn.myanimelist.net/images/anime/4/19644.jpg"
+        }
+      },
+      "url": "https://myanimelist.net/"
+    },
+    {
+      "mal_id": 10002,
+      "title": "Laughing Classroom",
+      "synopsis": "A slice-of-life comedy about a chaotic school club that accidentally summons spirits.",
+      "genres": [{ "name": "Comedy" }, { "name": "Slice of Life" }],
+      "images": {
+        "jpg": {
+          "image_url": "https://cdn.myanimelist.net/images/anime/5/18179.jpg"
+        }
+      },
+      "url": "https://myanimelist.net/"
+    },
+    {
+      "mal_id": 10003,
+      "title": "River of Silence",
+      "synopsis": "Drama set in a riverside town where every wish costs a memory.",
+      "genres": [{ "name": "Drama" }, { "name": "Supernatural" }],
+      "images": {
+        "jpg": {
+          "image_url": "https://cdn.myanimelist.net/images/anime/10/47347.jpg"
+        }
+      },
+      "url": "https://myanimelist.net/"
+    },
+    {
+      "mal_id": 10004,
+      "title": "Crown of Ash",
+      "synopsis": "Political fantasy: exiled royals forge alliances through duels and diplomacy.",
+      "genres": [{ "name": "Fantasy" }, { "name": "Action" }],
+      "images": {
+        "jpg": {
+          "image_url": "https://cdn.myanimelist.net/images/anime/3/40451.jpg"
+        }
+      },
+      "url": "https://myanimelist.net/"
+    },
+    {
+      "mal_id": 10005,
+      "title": "Metro Sprinters",
+      "synopsis": "Underground racing crew discovers their city is alive.",
+      "genres": [{ "name": "Action" }, { "name": "Sci-Fi" }],
+      "images": {
+        "jpg": {
+          "image_url": "https://cdn.myanimelist.net/images/anime/13/17407.jpg"
+        }
+      },
+      "url": "https://myanimelist.net/"
+    },
+    {
+      "mal_id": 10006,
+      "title": "Tea & Prophecy",
+      "synopsis": "Comedy about fortune-tellers who only predict lunch menus.",
+      "genres": [{ "name": "Comedy" }],
+      "images": {
+        "jpg": {
+          "image_url": "https://cdn.myanimelist.net/images/anime/12/8520.jpg"
+        }
+      },
+      "url": "https://myanimelist.net/"
+    }
+  ]
+}
