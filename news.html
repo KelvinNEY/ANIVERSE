@@ -1,218 +1,201 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="ANIVERSE news — Jikan API with offline JSON fallback." />
-    <title>News | ANIVERSE</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;0,9..40,700&family=JetBrains+Mono:wght@400;600;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
-    <link rel="stylesheet" href="css/styles.css" />
-  </head>
-  <body>
-    <a class="skip-link" href="#main-content">Skip to main content</a>
-    <header class="site-header">
-      <nav class="navbar navbar-expand-lg" aria-label="Main navigation">
-        <div class="container aniverse-wrap">
-          <a class="navbar-brand brand-logo" href="index.html"
-            ><span class="brand-ani">ANI</span><span class="brand-verse">VERSE</span></a
-          >
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navMain"
-            aria-controls="navMain"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navMain">
-            <ul class="navbar-nav mx-auto mb-2 mb-lg-0 nav-aniverse">
-              <li class="nav-item"><a class="nav-link" data-nav href="index.html">Home</a></li>
-              <li class="nav-item"><a class="nav-link" data-nav href="news.html">News</a></li>
-              <li class="nav-item"><a class="nav-link" data-nav href="gallery.html">Gallery</a></li>
-              <li class="nav-item"><a class="nav-link" data-nav href="events.html">Events</a></li>
-              <li class="nav-item"><a class="nav-link" data-nav href="community.html">Community</a></li>
-              <li class="nav-item"><a class="nav-link" data-nav href="contact.html">Contact</a></li>
-            </ul>
-            <button type="button" class="btn btn-sm ms-lg-3" id="themeToggle" aria-pressed="false" aria-label="Switch theme">
-              <span class="theme-toggle-label">DARK</span>
-            </button>
-          </div>
-        </div>
-      </nav>
-    </header>
 
-    <div class="news-ticker" role="region" aria-label="Headline ticker">
-      <div class="news-ticker-track">
-        <span class="ticker-part"
-          >★ CHAINSAW MAN PART 3 MANGA BEGINS SERIALIZATION ★ COMIC FIESTA 2026 LINEUP ★ JUJUTSU KAISEN MOVIE TEASER ★ COSPLAY WORLD CUP OPENS MAY 1 ★
-        </span>
-        <span class="ticker-part" aria-hidden="true"
-          >★ CHAINSAW MAN PART 3 MANGA BEGINS SERIALIZATION ★ COMIC FIESTA 2026 LINEUP ★ JUJUTSU KAISEN MOVIE TEASER ★ COSPLAY WORLD CUP OPENS MAY 1 ★
-        </span>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="ANIVERSE news — Jikan API with offline JSON fallback." />
+  <title>News | ANIVERSE</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;0,9..40,700&family=JetBrains+Mono:wght@400;600;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap"
+    rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <nav class="navbar navbar-expand-lg" aria-label="Main navigation">
+      <div class="container aniverse-wrap">
+        <a class="navbar-brand brand-logo" href="index.html"><span class="brand-ani">ANI</span><span
+            class="brand-verse">VERSE</span></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain"
+          aria-controls="navMain" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navMain">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0 nav-aniverse">
+            <li class="nav-item"><a class="nav-link" data-nav href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" data-nav href="news.html">News</a></li>
+            <li class="nav-item"><a class="nav-link" data-nav href="gallery.html">Gallery</a></li>
+            <li class="nav-item"><a class="nav-link" data-nav href="events.html">Events</a></li>
+            <li class="nav-item"><a class="nav-link" data-nav href="community.html">Community</a></li>
+            <li class="nav-item"><a class="nav-link" data-nav href="contact.html">Contact</a></li>
+          </ul>
+          <button type="button" class="btn btn-sm ms-lg-3" id="themeToggle" aria-pressed="false"
+            aria-label="Switch theme">
+            <span class="theme-toggle-label">DARK</span>
+          </button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <div class="news-ticker" role="region" aria-label="Headline ticker">
+    <div class="news-ticker-track">
+      <span class="ticker-part">★ CHAINSAW MAN PART 3 MANGA BEGINS SERIALIZATION ★ COMIC FIESTA 2026 LINEUP ★ JUJUTSU
+        KAISEN MOVIE TEASER ★ COSPLAY WORLD CUP OPENS MAY 1 ★
+      </span>
+      <span class="ticker-part" aria-hidden="true">★ CHAINSAW MAN PART 3 MANGA BEGINS SERIALIZATION ★ COMIC FIESTA 2026
+        LINEUP ★ JUJUTSU KAISEN MOVIE TEASER ★ COSPLAY WORLD CUP OPENS MAY 1 ★
+      </span>
+    </div>
+  </div>
+
+  <main id="main-content" class="py-4 py-lg-5">
+    <div class="container aniverse-wrap">
+      <p class="text-mono small text-muted mb-1">ANIVERSE / <span class="text-neon-pink">NEWS</span></p>
+      <div class="d-flex flex-wrap align-items-center gap-2 mb-3">
+        <span class="badge rounded-pill border border-secondary text-mono small py-2 px-3"><span
+            class="text-neon-pink me-1" aria-hidden="true">●</span> LIVE UPDATES</span>
+      </div>
+      <h1 class="page-title-split mb-2"><span class="part-muted">Latest</span> <span class="part-accent">News</span>
+      </h1>
+
+
+      <div class="row g-4 align-items-start">
+        <div class="col-lg-8">
+          <div id="newsStatus" class="alert alert-info d-none border-0" role="status"></div>
+          <p id="newsArticleCount" class="text-mono small text-neon-pink mb-3 d-none" aria-live="polite"></p>
+          <div class="filter-aniverse mb-4" role="group" aria-label="Filter by category">
+            <input type="radio" class="btn-check" name="newsFilter" id="f-all" value="all" checked autocomplete="off" />
+            <label class="btn btn-filter-all" for="f-all">All</label>
+            <input type="radio" class="btn-check" name="newsFilter" id="f-anime" value="anime" autocomplete="off" />
+            <label class="btn btn-filter-anime" for="f-anime">Anime</label>
+            <input type="radio" class="btn-check" name="newsFilter" id="f-cosplay" value="cosplay" autocomplete="off" />
+            <label class="btn btn-filter-cosplay" for="f-cosplay">Cosplay</label>
+            <input type="radio" class="btn-check" name="newsFilter" id="f-event" value="event" autocomplete="off" />
+            <label class="btn btn-filter-event" for="f-event">Events</label>
+          </div>
+          <div id="newsLoading" class="text-center py-5" role="status">
+            <div class="spinner-border text-secondary" aria-hidden="true"></div>
+            <p class="mt-2 text-muted small text-mono">Loading titles…</p>
+          </div>
+          <div id="newsGrid" class="row g-4 d-none"></div>
+        </div>
+
+        <aside class="col-lg-4" aria-label="News sidebar">
+          <div class="news-sidebar-sticky d-flex flex-column gap-4">
+            <section class="news-sidebar-panel" aria-labelledby="trendingHeading">
+              <h2 id="trendingHeading" class="news-sidebar-title">Trending now</h2>
+              <ol id="trendingList" class="news-trending-list mb-0">
+                <li class="news-trending-placeholder text-muted text-mono small">Loading picks…</li>
+              </ol>
+            </section>
+
+            <section class="news-sidebar-panel" aria-labelledby="tagsHeading">
+              <h2 id="tagsHeading" class="news-sidebar-title">Browse tags</h2>
+              <p class="small text-muted text-mono mb-2">Quick filters — same categories as the main chips.</p>
+              <div class="news-tags-cloud" id="tagsCloud">
+                <button type="button" class="news-tag-chip" data-filter="anime">Shonen</button>
+                <button type="button" class="news-tag-chip" data-filter="anime">Isekai</button>
+                <button type="button" class="news-tag-chip" data-filter="anime">Mecha</button>
+                <button type="button" class="news-tag-chip" data-filter="anime">MAPPA</button>
+                <button type="button" class="news-tag-chip" data-filter="anime">Ufotable</button>
+                <button type="button" class="news-tag-chip" data-filter="cosplay">Tutorial</button>
+                <button type="button" class="news-tag-chip" data-filter="cosplay">Cosplay</button>
+                <button type="button" class="news-tag-chip" data-filter="event">Cons</button>
+                <button type="button" class="news-tag-chip" data-filter="event">Malaysia</button>
+                <button type="button" class="news-tag-chip" data-filter="all">All</button>
+              </div>
+            </section>
+
+            <section class="news-sidebar-panel" aria-labelledby="newsletterHeading">
+              <h2 id="newsletterHeading" class="news-sidebar-title">Newsletter</h2>
+              <p class="small text-muted mb-3">
+                Get the latest anime &amp; cosplay buzz — demo form only; nothing is sent to a server.
+              </p>
+              <form id="newsletterForm" class="newsletter-form" novalidate>
+                <label for="newsletterEmail" class="visually-hidden">Email</label>
+                <input type="email" class="form-control mb-2" id="newsletterEmail" name="email"
+                  placeholder="your@email.com" autocomplete="email" required />
+                <button type="submit" class="btn btn-accent btn-sm w-100">Subscribe</button>
+              </form>
+              <p id="newsletterMsg" class="small text-success mt-2 mb-0 d-none" role="status"></p>
+            </section>
+          </div>
+        </aside>
       </div>
     </div>
+  </main>
 
-    <main id="main-content" class="py-4 py-lg-5">
-      <div class="container aniverse-wrap">
-        <p class="text-mono small text-muted mb-1">ANIVERSE / <span class="text-neon-pink">NEWS</span></p>
-        <div class="d-flex flex-wrap align-items-center gap-2 mb-3">
-          <span class="badge rounded-pill border border-secondary text-mono small py-2 px-3"
-            ><span class="text-neon-pink me-1" aria-hidden="true">●</span> LIVE UPDATES</span
-          >
-        </div>
-        <h1 class="page-title-split mb-2"><span class="part-muted">Latest</span> <span class="part-accent">News</span></h1>
-        
-
-        <div class="row g-4 align-items-start">
-          <div class="col-lg-8">
-            <div id="newsStatus" class="alert alert-info d-none border-0" role="status"></div>
-            <p id="newsArticleCount" class="text-mono small text-neon-pink mb-3 d-none" aria-live="polite"></p>
-            <div class="filter-aniverse mb-4" role="group" aria-label="Filter by category">
-              <input type="radio" class="btn-check" name="newsFilter" id="f-all" value="all" checked autocomplete="off" />
-              <label class="btn btn-filter-all" for="f-all">All</label>
-              <input type="radio" class="btn-check" name="newsFilter" id="f-anime" value="anime" autocomplete="off" />
-              <label class="btn btn-filter-anime" for="f-anime">Anime</label>
-              <input type="radio" class="btn-check" name="newsFilter" id="f-cosplay" value="cosplay" autocomplete="off" />
-              <label class="btn btn-filter-cosplay" for="f-cosplay">Cosplay</label>
-              <input type="radio" class="btn-check" name="newsFilter" id="f-event" value="event" autocomplete="off" />
-              <label class="btn btn-filter-event" for="f-event">Events</label>
-            </div>
-            <div id="newsLoading" class="text-center py-5" role="status">
-              <div class="spinner-border text-secondary" aria-hidden="true"></div>
-              <p class="mt-2 text-muted small text-mono">Loading titles…</p>
-            </div>
-            <div id="newsGrid" class="row g-4 d-none"></div>
+  <footer class="site-footer py-5">
+    <div class="container aniverse-wrap">
+      <div class="row g-4 align-items-start">
+        <div class="col-12 col-xl-4">
+          <div class="footer-brand mb-2">
+            <span class="brand-logo"><span class="brand-ani">ANI</span><span class="brand-verse">VERSE</span></span>
           </div>
-
-          <aside class="col-lg-4" aria-label="News sidebar">
-            <div class="news-sidebar-sticky d-flex flex-column gap-4">
-              <section class="news-sidebar-panel" aria-labelledby="trendingHeading">
-                <h2 id="trendingHeading" class="news-sidebar-title">Trending now</h2>
-                <ol id="trendingList" class="news-trending-list mb-0">
-                  <li class="news-trending-placeholder text-muted text-mono small">Loading picks…</li>
-                </ol>
-              </section>
-
-              <section class="news-sidebar-panel" aria-labelledby="tagsHeading">
-                <h2 id="tagsHeading" class="news-sidebar-title">Browse tags</h2>
-                <p class="small text-muted text-mono mb-2">Quick filters — same categories as the main chips.</p>
-                <div class="news-tags-cloud" id="tagsCloud">
-                  <button type="button" class="news-tag-chip" data-filter="anime">Shonen</button>
-                  <button type="button" class="news-tag-chip" data-filter="anime">Isekai</button>
-                  <button type="button" class="news-tag-chip" data-filter="anime">Mecha</button>
-                  <button type="button" class="news-tag-chip" data-filter="anime">MAPPA</button>
-                  <button type="button" class="news-tag-chip" data-filter="anime">Ufotable</button>
-                  <button type="button" class="news-tag-chip" data-filter="cosplay">Tutorial</button>
-                  <button type="button" class="news-tag-chip" data-filter="cosplay">Cosplay</button>
-                  <button type="button" class="news-tag-chip" data-filter="event">Cons</button>
-                  <button type="button" class="news-tag-chip" data-filter="event">Malaysia</button>
-                  <button type="button" class="news-tag-chip" data-filter="all">All</button>
-                </div>
-              </section>
-
-              <section class="news-sidebar-panel" aria-labelledby="newsletterHeading">
-                <h2 id="newsletterHeading" class="news-sidebar-title">Newsletter</h2>
-                <p class="small text-muted mb-3">
-                  Get the latest anime &amp; cosplay buzz — demo form only; nothing is sent to a server.
-                </p>
-                <form id="newsletterForm" class="newsletter-form" novalidate>
-                  <label for="newsletterEmail" class="visually-hidden">Email</label>
-                  <input
-                    type="email"
-                    class="form-control mb-2"
-                    id="newsletterEmail"
-                    name="email"
-                    placeholder="your@email.com"
-                    autocomplete="email"
-                    required
-                  />
-                  <button type="submit" class="btn btn-accent btn-sm w-100">Subscribe</button>
-                </form>
-                <p id="newsletterMsg" class="small text-success mt-2 mb-0 d-none" role="status"></p>
-              </section>
-            </div>
-          </aside>
+          <p class="footer-tagline">
+            Your central hub for anime news, cosplay galleries, events, and community. Powered by passion, built for
+            fans.
+          </p>
+          <p class="footer-col-title mt-4">Follow us</p>
+          <div class="footer-social">
+            <a href="https://www.instagram.com/aniverse.kr?igsh=anVpbnV3ZGppNGY3" target="_blank"
+              rel="noopener noreferrer">[ INSTAGRAM ]</a>
+            <a href="https://discord.gg/TEzRjM5B" target="_blank" rel="noopener noreferrer">[ DISCORD ]</a>
+            <a href="https://www.youtube.com/@AniverseMedia" target="_blank" rel="noopener noreferrer">[ YOUTUBE ]</a>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-xl-2">
+          <p class="footer-col-title">Navigate</p>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="news.html">News</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="events.html">Events</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-4 col-xl-2">
+          <p class="footer-col-title">Community</p>
+          <ul class="footer-links">
+            <li><a href="community.html">Polls</a></li>
+            <li><a href="community.html">Comments</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-12 col-md-4 col-xl-4">
+          <p class="footer-col-title">About Us</p>
+          <p class="footer-meta mb-0">
+            ANIVERSE is your central hub for anime news, cosplay galleries, events, and a thriving fan community. We
+            connect anime enthusiasts across the region through live discussions, community polls, and exclusive event
+            coverage. Join thousands of fans today.
+          </p>
+          <p class="footer-col-title mt-4">Explore</p>
+          <ul class="footer-links">
+            <li><a href="news.html">Anime catalog</a></li>
+            <li><a href="gallery.html">Cosplay grid</a></li>
+            <li><a href="events.html">Event RSVPs</a></li>
+          </ul>
         </div>
       </div>
-    </main>
+      <p class="footer-copy text-center pt-4 mt-4 mb-0 border-top" style="border-color: var(--border) !important">
+        &copy; 2026 ANIVERSE
+    </div>
+  </footer>
 
-    <footer class="site-footer py-5">
-      <div class="container aniverse-wrap">
-        <div class="row g-4 align-items-start">
-          <div class="col-12 col-xl-4">
-            <div class="footer-brand mb-2">
-              <span class="brand-logo"
-                ><span class="brand-ani">ANI</span><span class="brand-verse">VERSE</span></span
-              >
-            </div>
-            <p class="footer-tagline">
-              Your central hub for anime news, cosplay galleries, events, and community. Powered by passion, built for fans.
-            </p>
-            <p class="footer-col-title mt-4">Follow us</p>
-            <div class="footer-social">
-              <a href="https://twitter.com/intent/tweet?text=ANIVERSE" target="_blank" rel="noopener noreferrer">[ TWITTER / X ]</a>
-              <a href="#">[ INSTAGRAM ]</a>
-              <a href="#">[ DISCORD ]</a>
-              <a href="#">[ YOUTUBE ]</a>
-            </div>
-          </div>
-          <div class="col-6 col-md-4 col-xl-2">
-            <p class="footer-col-title">Navigate</p>
-            <ul class="footer-links">
-              <li><a href="index.html">Home</a></li>
-              <li><a href="news.html">News</a></li>
-              <li><a href="gallery.html">Gallery</a></li>
-              <li><a href="events.html">Events</a></li>
-            </ul>
-          </div>
-          <div class="col-6 col-md-4 col-xl-2">
-            <p class="footer-col-title">Community</p>
-            <ul class="footer-links">
-              <li><a href="community.html">Polls</a></li>
-              <li><a href="community.html">Comments</a></li>
-              <li><a href="contact.html">Contact</a></li>
-            </ul>
-          </div>
-          <div class="col-12 col-md-4 col-xl-4">
-            <p class="footer-col-title">About Us</p>
-            <p class="footer-meta mb-0">
-              ANIVERSE is your central hub for anime news, cosplay galleries, events, and a thriving fan community. We connect anime enthusiasts across the region through live discussions, community polls, and exclusive event coverage. Join thousands of fans today.
-            </p>
-            <p class="footer-col-title mt-4">Explore</p>
-            <ul class="footer-links">
-              <li><a href="news.html">Anime catalog</a></li>
-              <li><a href="gallery.html">Cosplay grid</a></li>
-              <li><a href="events.html">Event RSVPs</a></li>
-            </ul>
-          </div>
-        </div>
-        <p class="footer-copy text-center pt-4 mt-4 mb-0 border-top" style="border-color: var(--border) !important">
-          &copy; 2026 ANIVERSE
-      </div>
-    </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/news.js"></script>
+</body>
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"
-    ></script>
-    <script src="js/storage.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/news.js"></script>
-  </body>
 </html>

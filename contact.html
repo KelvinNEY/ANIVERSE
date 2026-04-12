@@ -1,281 +1,256 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Contact ANIVERSE — validation and cookie remember-me." />
-    <title>Contact | ANIVERSE</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;0,9..40,700&family=JetBrains+Mono:wght@400;600;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
-    <link rel="stylesheet" href="css/styles.css" />
-  </head>
-  <body>
-    <a class="skip-link" href="#main-content">Skip to main content</a>
-    <header class="site-header">
-      <nav class="navbar navbar-expand-lg" aria-label="Main navigation">
-        <div class="container aniverse-wrap">
-          <a class="navbar-brand brand-logo" href="index.html"
-            ><span class="brand-ani">ANI</span><span class="brand-verse">VERSE</span></a
-          >
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navMain"
-            aria-controls="navMain"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Contact ANIVERSE — validation and cookie remember-me." />
+  <title>Contact | ANIVERSE</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;0,9..40,700&family=JetBrains+Mono:wght@400;600;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap"
+    rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <nav class="navbar navbar-expand-lg" aria-label="Main navigation">
+      <div class="container aniverse-wrap">
+        <a class="navbar-brand brand-logo" href="index.html"><span class="brand-ani">ANI</span><span
+            class="brand-verse">VERSE</span></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain"
+          aria-controls="navMain" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navMain">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0 nav-aniverse">
+            <li class="nav-item"><a class="nav-link" data-nav href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" data-nav href="news.html">News</a></li>
+            <li class="nav-item"><a class="nav-link" data-nav href="gallery.html">Gallery</a></li>
+            <li class="nav-item"><a class="nav-link" data-nav href="events.html">Events</a></li>
+            <li class="nav-item"><a class="nav-link" data-nav href="community.html">Community</a></li>
+            <li class="nav-item"><a class="nav-link" data-nav href="contact.html">Contact</a></li>
+          </ul>
+          <button type="button" class="btn btn-sm ms-lg-3" id="themeToggle" aria-pressed="false"
+            aria-label="Switch theme">
+            <span class="theme-toggle-label">DARK</span>
           </button>
-          <div class="collapse navbar-collapse" id="navMain">
-            <ul class="navbar-nav mx-auto mb-2 mb-lg-0 nav-aniverse">
-              <li class="nav-item"><a class="nav-link" data-nav href="index.html">Home</a></li>
-              <li class="nav-item"><a class="nav-link" data-nav href="news.html">News</a></li>
-              <li class="nav-item"><a class="nav-link" data-nav href="gallery.html">Gallery</a></li>
-              <li class="nav-item"><a class="nav-link" data-nav href="events.html">Events</a></li>
-              <li class="nav-item"><a class="nav-link" data-nav href="community.html">Community</a></li>
-              <li class="nav-item"><a class="nav-link" data-nav href="contact.html">Contact</a></li>
-            </ul>
-            <button type="button" class="btn btn-sm ms-lg-3" id="themeToggle" aria-pressed="false" aria-label="Switch theme">
-              <span class="theme-toggle-label">DARK</span>
-            </button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <div class="news-ticker" role="region" aria-label="Headline ticker">
+    <div class="news-ticker-track">
+      <span class="ticker-part">★ CONTACT THE HUB ★ FAQ &amp; SOCIALS ★ STUDENT DEMO ★ </span>
+      <span class="ticker-part" aria-hidden="true">★ CONTACT THE HUB ★ FAQ &amp; SOCIALS ★ STUDENT DEMO ★ </span>
+    </div>
+  </div>
+
+  <main id="main-content" class="py-4 py-lg-5">
+    <div class="container aniverse-wrap">
+      <p class="breadcrumb-mono text-muted mb-2">ANIVERSE / <span class="text-accent">CONTACT</span></p>
+      <h1 class="page-title-split mb-2"><span class="part-accent">GET IN</span> <span class="part-heading">TOUCH WITH
+          US</span></h1>
+      <p class="page-sub-mono mb-5">Questions, submissions, partnerships, or press inquiries — we'd love to hear from
+        you. Your info is remembered for next time.</p>
+
+      <div class="row g-4">
+        <div class="col-lg-7">
+          <section class="contact-panel p-4 shadow-soft">
+            <div class="d-flex justify-content-between align-items-start mb-4">
+              <div>
+                <p class="section-label-mono mb-1">Send a message</p>
+              </div>
+            </div>
+            <form id="contactForm" class="needs-validation" novalidate aria-describedby="formErrors">
+              <div id="formErrors" class="alert alert-danger d-none" role="alert"></div>
+              <div class="row g-3 mb-3">
+                <div class="col-sm-6">
+                  <label for="contactName" class="form-label text-mono small text-uppercase">Full name</label>
+                  <input type="text" class="form-control form-control-dark" id="contactName" name="name" required
+                    minlength="2" maxlength="80" autocomplete="name" aria-describedby="nameFeedback"
+                    placeholder="Your name" />
+                  <div id="nameFeedback" class="invalid-feedback">Please enter your name.</div>
+                </div>
+                <div class="col-sm-6">
+                  <label for="contactEmail" class="form-label text-mono small text-uppercase">Email address</label>
+                  <input type="email" class="form-control form-control-dark" id="contactEmail" name="email" required
+                    autocomplete="email" aria-describedby="emailFeedback" placeholder="you@email.com" />
+                  <div id="emailFeedback" class="invalid-feedback">Please enter a valid email address.</div>
+                </div>
+                <div class="col-sm-6">
+                  <label for="contactSubject" class="form-label text-mono small text-uppercase">Subject</label>
+                  <select class="form-select form-control-dark" id="contactSubject" name="subject" required
+                    aria-describedby="subjectFeedback">
+                    <option value="" selected disabled>– Select a topic –</option>
+                    <option value="general">General inquiry</option>
+                    <option value="submission">Submission</option>
+                    <option value="partnership">Partnership</option>
+                    <option value="press">Press inquiry</option>
+                  </select>
+                  <div id="subjectFeedback" class="invalid-feedback">Please select a subject.</div>
+                </div>
+                <div class="col-sm-6">
+                  <label for="contactHandle" class="form-label text-mono small text-uppercase">Social handle
+                    (optional)</label>
+                  <input type="text" class="form-control form-control-dark" id="contactHandle" name="handle"
+                    maxlength="40" placeholder="@yourhandle" />
+                </div>
+                <div class="col-12">
+                  <label for="contactMessage" class="form-label text-mono small text-uppercase">Message</label>
+                  <textarea class="form-control form-control-dark message-field" id="contactMessage" name="message"
+                    rows="6" required minlength="10" maxlength="500" aria-describedby="msgFeedback messageCount"
+                    placeholder="Tell us what's on your mind..."></textarea>
+                  <div class="d-flex justify-content-between align-items-center mt-2">
+                    <div id="msgFeedback" class="invalid-feedback">Message should be at least 10 characters.</div>
+                    <div id="messageCount" class="text-mono small text-muted">0 / 500</div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-check form-check-dark mb-2">
+                <input class="form-check-input" type="checkbox" id="rememberMe" name="remember" />
+                <label class="form-check-label text-mono small" for="rememberMe">Remember my name and email for next
+                  time via cookies</label>
+              </div>
+              <div class="form-check form-check-dark mb-2">
+                <input class="form-check-input" type="checkbox" id="newsletter" name="newsletter" />
+                <label class="form-check-label text-mono small" for="newsletter">Subscribe me to the AniVerse weekly
+                  newsletter</label>
+              </div>
+              <div class="form-check form-check-dark mb-4">
+                <input class="form-check-input" type="checkbox" id="agreePolicy" name="agreePolicy" required />
+                <label class="form-check-label text-mono small" for="agreePolicy">I agree to the <a href="#"
+                    class="text-accent">Privacy Policy</a> and <a href="#" class="text-accent">Terms of Use</a> </label>
+                <div class="invalid-feedback">You must agree before sending.</div>
+              </div>
+              <button type="submit" class="btn btn-accent btn-lg w-100 text-uppercase letter-spacing-2">Send
+                Message</button>
+            </form>
+            <div id="contactSuccess" class="alert alert-success mt-3 d-none text-mono small" role="status">
+              ✓ Message sent successfully! Thank you for reaching out. We'll get back to you within 24 hours.
+            </div>
+          </section>
+        </div>
+        <div class="col-lg-5">
+          <div class="row g-4">
+            <div class="col-12">
+              <section class="contact-panel p-4 shadow-soft">
+                <p class="section-label-mono mb-3">Contact info</p>
+                <div class="contact-info-list">
+                  <div>
+                    <div class="contact-info-label">Email</div>
+                    <div class="contact-info-value">aniverse@gmail.com.my</div>
+                  </div>
+                  <div>
+                    <div class="contact-info-label">Response time</div>
+                    <div class="contact-info-value">Within 24 hours</div>
+                  </div>
+                  <div>
+                    <div class="contact-info-label">Press inquiries</div>
+                    <div class="contact-info-value">aniverseinquiries@gmail.com.my</div>
+                  </div>
+                  <div>
+                    <div class="contact-info-label">Based in</div>
+                    <div class="contact-info-value">Kuala Lumpur, Malaysia</div>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-12">
+              <section class="contact-panel p-4 shadow-soft">
+                <p class="section-label-mono mb-3">Follow us</p>
+                <ul class="social-follow-list list-unstyled mb-0">
+                  <li><span class="social-icon bg-pink"><i class="bi bi-youtube"></i></span>
+                    <div><strong><a href="https://www.youtube.com/@AniverseMedia" target="_blank"
+                          rel="noopener noreferrer">@AniverseMedia</a></strong><span>Youtube</span></div>
+                  </li>
+                  <li><span class="social-icon bg-purple"><i class="bi bi-instagram"></i></span>
+                    <div><strong><a href="https://www.instagram.com/aniverse.kr?igsh=anVpbnV3ZGppNGY3" target="_blank"
+                          rel="noopener noreferrer">@Aniverse</a></strong><span>Instagram</span></div>
+                  </li>
+                  <li><span class="social-icon bg-cyan"><i class="bi bi-discord"></i></span>
+                    <div><strong><a href="https://discord.gg/TEzRjM5B" target="_blank"
+                          rel="noopener noreferrer">@AniverseCommunity</a></strong><span>Discord</span></div>
+                  </li>
+                </ul>
+              </section>
+            </div>
           </div>
         </div>
-      </nav>
-    </header>
-
-    <div class="news-ticker" role="region" aria-label="Headline ticker">
-      <div class="news-ticker-track">
-        <span class="ticker-part">★ CONTACT THE HUB ★ FAQ &amp; SOCIALS ★ STUDENT DEMO ★ </span>
-        <span class="ticker-part" aria-hidden="true">★ CONTACT THE HUB ★ FAQ &amp; SOCIALS ★ STUDENT DEMO ★ </span>
       </div>
     </div>
+  </main>
 
-    <main id="main-content" class="py-4 py-lg-5">
-      <div class="container aniverse-wrap">
-        <p class="breadcrumb-mono text-muted mb-2">ANIVERSE / <span class="text-accent">CONTACT</span></p>
-        <h1 class="page-title-split mb-2"><span class="part-accent">GET IN</span> <span class="part-heading">TOUCH WITH US</span></h1>
-        <p class="page-sub-mono mb-5">Questions, submissions, partnerships, or press inquiries — we'd love to hear from you. Your info is remembered for next time.</p>
-
-        <div class="row g-4">
-          <div class="col-lg-7">
-            <section class="contact-panel p-4 shadow-soft">
-              <div class="d-flex justify-content-between align-items-start mb-4">
-                <div>
-                  <p class="section-label-mono mb-1">Send a message</p>
-                </div>
-              </div>
-              <form id="contactForm" class="needs-validation" novalidate aria-describedby="formErrors">
-                <div id="formErrors" class="alert alert-danger d-none" role="alert"></div>
-                <div class="row g-3 mb-3">
-                  <div class="col-sm-6">
-                    <label for="contactName" class="form-label text-mono small text-uppercase">Full name</label>
-                    <input
-                      type="text"
-                      class="form-control form-control-dark"
-                      id="contactName"
-                      name="name"
-                      required
-                      minlength="2"
-                      maxlength="80"
-                      autocomplete="name"
-                      aria-describedby="nameFeedback"
-                      placeholder="Your name"
-                    />
-                    <div id="nameFeedback" class="invalid-feedback">Please enter your name.</div>
-                  </div>
-                  <div class="col-sm-6">
-                    <label for="contactEmail" class="form-label text-mono small text-uppercase">Email address</label>
-                    <input
-                      type="email"
-                      class="form-control form-control-dark"
-                      id="contactEmail"
-                      name="email"
-                      required
-                      autocomplete="email"
-                      aria-describedby="emailFeedback"
-                      placeholder="you@email.com"
-                    />
-                    <div id="emailFeedback" class="invalid-feedback">Please enter a valid email address.</div>
-                  </div>
-                  <div class="col-sm-6">
-                    <label for="contactSubject" class="form-label text-mono small text-uppercase">Subject</label>
-                    <select class="form-select form-control-dark" id="contactSubject" name="subject" required aria-describedby="subjectFeedback">
-                      <option value="" selected disabled>– Select a topic –</option>
-                      <option value="general">General inquiry</option>
-                      <option value="submission">Submission</option>
-                      <option value="partnership">Partnership</option>
-                      <option value="press">Press inquiry</option>
-                    </select>
-                    <div id="subjectFeedback" class="invalid-feedback">Please select a subject.</div>
-                  </div>
-                  <div class="col-sm-6">
-                    <label for="contactHandle" class="form-label text-mono small text-uppercase">Social handle (optional)</label>
-                    <input
-                      type="text"
-                      class="form-control form-control-dark"
-                      id="contactHandle"
-                      name="handle"
-                      maxlength="40"
-                      placeholder="@yourhandle"
-                    />
-                  </div>
-                  <div class="col-12">
-                    <label for="contactMessage" class="form-label text-mono small text-uppercase">Message</label>
-                    <textarea
-                      class="form-control form-control-dark message-field"
-                      id="contactMessage"
-                      name="message"
-                      rows="6"
-                      required
-                      minlength="10"
-                      maxlength="500"
-                      aria-describedby="msgFeedback messageCount"
-                      placeholder="Tell us what's on your mind..."
-                    ></textarea>
-                    <div class="d-flex justify-content-between align-items-center mt-2">
-                      <div id="msgFeedback" class="invalid-feedback">Message should be at least 10 characters.</div>
-                      <div id="messageCount" class="text-mono small text-muted">0 / 500</div>
-                    </div>
-                  </div>
-                </div>
-                <div class="form-check form-check-dark mb-2">
-                  <input class="form-check-input" type="checkbox" id="rememberMe" name="remember" />
-                  <label class="form-check-label text-mono small" for="rememberMe">Remember my name and email for next time via cookies</label>
-                </div>
-                <div class="form-check form-check-dark mb-2">
-                  <input class="form-check-input" type="checkbox" id="newsletter" name="newsletter" />
-                  <label class="form-check-label text-mono small" for="newsletter">Subscribe me to the AniVerse weekly newsletter</label>
-                </div>
-                <div class="form-check form-check-dark mb-4">
-                  <input class="form-check-input" type="checkbox" id="agreePolicy" name="agreePolicy" required />
-                  <label class="form-check-label text-mono small" for="agreePolicy">I agree to the <a href="#" class="text-accent">Privacy Policy</a> and <a href="#" class="text-accent">Terms of Use</a> </label>
-                  <div class="invalid-feedback">You must agree before sending.</div>
-                </div>
-                <button type="submit" class="btn btn-accent btn-lg w-100 text-uppercase letter-spacing-2">Send Message</button>
-              </form>
-              <div id="contactSuccess" class="alert alert-success mt-3 d-none text-mono small" role="status">
-                ✓ Message sent successfully! Thank you for reaching out. We'll get back to you within 24 hours.
-              </div>
-            </section>
+  <footer class="site-footer py-5">
+    <div class="container aniverse-wrap">
+      <div class="row g-4 align-items-start">
+        <div class="col-12 col-xl-4">
+          <div class="footer-brand mb-2">
+            <span class="brand-logo"><span class="brand-ani">ANI</span><span class="brand-verse">VERSE</span></span>
           </div>
-          <div class="col-lg-5">
-            <div class="row g-4">
-              <div class="col-12">
-                <section class="contact-panel p-4 shadow-soft">
-                  <p class="section-label-mono mb-3">Contact info</p>
-                  <div class="contact-info-list">
-                    <div>
-                      <div class="contact-info-label">Email</div>
-                      <div class="contact-info-value">hello@aniverse.my</div>
-                    </div>
-                    <div>
-                      <div class="contact-info-label">Response time</div>
-                      <div class="contact-info-value">Within 24 hours</div>
-                    </div>
-                    <div>
-                      <div class="contact-info-label">Press inquiries</div>
-                      <div class="contact-info-value">press@aniverse.my</div>
-                    </div>
-                    <div>
-                      <div class="contact-info-label">Based in</div>
-                      <div class="contact-info-value">Kuala Lumpur, Malaysia</div>
-                    </div>
-                  </div>
-                </section>
-              </div>
-              <div class="col-12">
-                <section class="contact-panel p-4 shadow-soft">
-                  <p class="section-label-mono mb-3">Follow us</p>
-                  <ul class="social-follow-list list-unstyled mb-0">
-                    <li><span class="social-icon bg-pink"><i class="bi bi-x-lg"></i></span><div><strong>Twitter / X</strong><span>@AniVerseHQ</span></div></li>
-                    <li><span class="social-icon bg-purple"><i class="bi bi-instagram"></i></span><div><strong>Instagram</strong><span>@aniverse.my</span></div></li>
-                    <li><span class="social-icon bg-cyan"><i class="bi bi-discord"></i></span><div><strong>Discord</strong><span>discord.gg/aniverse</span></div></li>
-                    <li><span class="social-icon bg-pink"><i class="bi bi-youtube"></i></span><div><strong>YouTube</strong><span>/AniVerse</span></div></li>
-                  </ul>
-                </section>
-              </div>
-            </div>
+          <p class="footer-tagline">
+            Your central hub for anime news, cosplay galleries, events, and community. Powered by passion, built for
+            fans.
+          </p>
+          <p class="footer-col-title mt-4">Follow us</p>
+          <div class="footer-social">
+            <a href="https://www.instagram.com/aniverse.kr?igsh=anVpbnV3ZGppNGY3" target="_blank"
+              rel="noopener noreferrer">[ INSTAGRAM ]</a>
+            <a href="https://discord.gg/TEzRjM5B" target="_blank" rel="noopener noreferrer">[ DISCORD ]</a>
+            <a href="https://www.youtube.com/@AniverseMedia" target="_blank" rel="noopener noreferrer">[ YOUTUBE ]</a>
           </div>
         </div>
-      </div>
-    </main>
-
-    <footer class="site-footer py-5">
-      <div class="container aniverse-wrap">
-        <div class="row g-4 align-items-start">
-          <div class="col-12 col-xl-4">
-            <div class="footer-brand mb-2">
-              <span class="brand-logo"
-                ><span class="brand-ani">ANI</span><span class="brand-verse">VERSE</span></span
-              >
-            </div>
-            <p class="footer-tagline">
-              Your central hub for anime news, cosplay galleries, events, and community. Powered by passion, built for fans.
-            </p>
-            <p class="footer-col-title mt-4">Follow us</p>
-            <div class="footer-social">
-              <a href="https://twitter.com/intent/tweet?text=ANIVERSE" target="_blank" rel="noopener noreferrer">[ TWITTER / X ]</a>
-              <a href="#">[ INSTAGRAM ]</a>
-              <a href="#">[ DISCORD ]</a>
-              <a href="#">[ YOUTUBE ]</a>
-            </div>
-          </div>
-          <div class="col-6 col-md-4 col-xl-2">
-            <p class="footer-col-title">Navigate</p>
-            <ul class="footer-links">
-              <li><a href="index.html">Home</a></li>
-              <li><a href="news.html">News</a></li>
-              <li><a href="gallery.html">Gallery</a></li>
-              <li><a href="events.html">Events</a></li>
-            </ul>
-          </div>
-          <div class="col-6 col-md-4 col-xl-2">
-            <p class="footer-col-title">Community</p>
-            <ul class="footer-links">
-              <li><a href="community.html">Polls</a></li>
-              <li><a href="community.html">Comments</a></li>
-              <li><a href="contact.html">Contact</a></li>
-            </ul>
-          </div>
-          <div class="col-12 col-md-4 col-xl-4">
-            <p class="footer-col-title">About Us</p>
-            <p class="footer-meta mb-0">
-              ANIVERSE is your central hub for anime news, cosplay galleries, events, and a thriving fan community. We connect anime enthusiasts across the region through live discussions, community polls, and exclusive event coverage. Join thousands of fans today.
-            </p>
-            <p class="footer-col-title mt-4">Explore</p>
-            <ul class="footer-links">
-              <li><a href="news.html">Anime catalog</a></li>
-              <li><a href="gallery.html">Cosplay grid</a></li>
-              <li><a href="events.html">Event RSVPs</a></li>
-            </ul>
-          </div>
+        <div class="col-6 col-md-4 col-xl-2">
+          <p class="footer-col-title">Navigate</p>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="news.html">News</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="events.html">Events</a></li>
+          </ul>
         </div>
-        <p class="footer-copy text-center pt-4 mt-4 mb-0 border-top" style="border-color: var(--border) !important">
-          &copy; 2026 ANIVERSE
-        </p>
+        <div class="col-6 col-md-4 col-xl-2">
+          <p class="footer-col-title">Community</p>
+          <ul class="footer-links">
+            <li><a href="community.html">Polls</a></li>
+            <li><a href="community.html">Comments</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-12 col-md-4 col-xl-4">
+          <p class="footer-col-title">About Us</p>
+          <p class="footer-meta mb-0">
+            ANIVERSE is your central hub for anime news, cosplay galleries, events, and a thriving fan community. We
+            connect anime enthusiasts across the region through live discussions, community polls, and exclusive event
+            coverage. Join thousands of fans today.
+          </p>
+          <p class="footer-col-title mt-4">Explore</p>
+          <ul class="footer-links">
+            <li><a href="news.html">Anime catalog</a></li>
+            <li><a href="gallery.html">Cosplay grid</a></li>
+            <li><a href="events.html">Event RSVPs</a></li>
+          </ul>
+        </div>
       </div>
-    </footer>
+      <p class="footer-copy text-center pt-4 mt-4 mb-0 border-top" style="border-color: var(--border) !important">
+        &copy; 2026 ANIVERSE
+      </p>
+    </div>
+  </footer>
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"
-    ></script>
-    <script src="js/storage.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/contact.js"></script>
-  </body>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/contact.js"></script>
+</body>
+
 </html>

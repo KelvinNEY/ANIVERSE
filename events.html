@@ -1,259 +1,255 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="ANIVERSE events — RSVP demo with session storage." />
-    <title>Events | ANIVERSE</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;0,9..40,700&family=JetBrains+Mono:wght@400;600;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
-    <link rel="stylesheet" href="css/styles.css" />
-  </head>
-  <body>
-    <a class="skip-link" href="#main-content">Skip to main content</a>
-    <header class="site-header">
-      <nav class="navbar navbar-expand-lg" aria-label="Main navigation">
-        <div class="container aniverse-wrap">
-          <a class="navbar-brand brand-logo" href="index.html"
-            ><span class="brand-ani">ANI</span><span class="brand-verse">VERSE</span></a
-          >
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navMain"
-            aria-controls="navMain"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="ANIVERSE events — RSVP demo with session storage." />
+  <title>Events | ANIVERSE</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;0,9..40,700&family=JetBrains+Mono:wght@400;600;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap"
+    rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <nav class="navbar navbar-expand-lg" aria-label="Main navigation">
+      <div class="container aniverse-wrap">
+        <a class="navbar-brand brand-logo" href="index.html"><span class="brand-ani">ANI</span><span
+            class="brand-verse">VERSE</span></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain"
+          aria-controls="navMain" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navMain">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0 nav-aniverse">
+            <li class="nav-item"><a class="nav-link" data-nav href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" data-nav href="news.html">News</a></li>
+            <li class="nav-item"><a class="nav-link" data-nav href="gallery.html">Gallery</a></li>
+            <li class="nav-item"><a class="nav-link" data-nav href="events.html">Events</a></li>
+            <li class="nav-item"><a class="nav-link" data-nav href="community.html">Community</a></li>
+            <li class="nav-item"><a class="nav-link" data-nav href="contact.html">Contact</a></li>
+          </ul>
+          <button type="button" class="btn btn-sm ms-lg-3" id="themeToggle" aria-pressed="false"
+            aria-label="Switch theme">
+            <span class="theme-toggle-label">DARK</span>
           </button>
-          <div class="collapse navbar-collapse" id="navMain">
-            <ul class="navbar-nav mx-auto mb-2 mb-lg-0 nav-aniverse">
-              <li class="nav-item"><a class="nav-link" data-nav href="index.html">Home</a></li>
-              <li class="nav-item"><a class="nav-link" data-nav href="news.html">News</a></li>
-              <li class="nav-item"><a class="nav-link" data-nav href="gallery.html">Gallery</a></li>
-              <li class="nav-item"><a class="nav-link" data-nav href="events.html">Events</a></li>
-              <li class="nav-item"><a class="nav-link" data-nav href="community.html">Community</a></li>
-              <li class="nav-item"><a class="nav-link" data-nav href="contact.html">Contact</a></li>
-            </ul>
-            <button type="button" class="btn btn-sm ms-lg-3" id="themeToggle" aria-pressed="false" aria-label="Switch theme">
-              <span class="theme-toggle-label">DARK</span>
-            </button>
-          </div>
         </div>
-      </nav>
-    </header>
+      </div>
+    </nav>
+  </header>
 
-    <div class="news-ticker" role="region" aria-label="Headline ticker">
-      <div class="news-ticker-track">
-        <span class="ticker-part"
-          >★ COMIC FIESTA 2026 GUEST LINEUP ★ COSPLAY WORLD CUP REGISTRATION ★ ANIME MATSURI SPRING ★
-        </span>
-        <span class="ticker-part" aria-hidden="true"
-          >★ COMIC FIESTA 2026 GUEST LINEUP ★ COSPLAY WORLD CUP REGISTRATION ★ ANIME MATSURI SPRING ★
-        </span>
+  <div class="news-ticker" role="region" aria-label="Headline ticker">
+    <div class="news-ticker-track">
+      <span class="ticker-part">★ COMIC FIESTA 2026 GUEST LINEUP ★ COSPLAY WORLD CUP REGISTRATION ★ ANIME MATSURI SPRING
+        ★
+      </span>
+      <span class="ticker-part" aria-hidden="true">★ COMIC FIESTA 2026 GUEST LINEUP ★ COSPLAY WORLD CUP REGISTRATION ★
+        ANIME MATSURI SPRING ★
+      </span>
+    </div>
+  </div>
+
+  <main id="main-content" class="py-4 py-lg-5">
+    <div class="container aniverse-wrap">
+      <section class="events-hero mb-4">
+        <div>
+          <div class="eyebrow text-mono text-uppercase text-muted mb-3">ANIVERSE / EVENTS</div>
+          <h1 class="page-title-split mb-2"><span class="part-muted">Upcoming</span> <span
+              class="part-accent">Events</span></h1>
+          <p class="page-sub-mono mb-3">Conventions, competitions, screenings and workshops. RSVP to save your spot —
+            stored for your session.</p>
+        </div>
+        <div class="events-stat-card" aria-live="polite" aria-atomic="true">
+          <span id="rsvpCount" class="stat-value">0</span>
+          <span class="stat-label">Events RSVP'd</span>
+        </div>
+      </section>
+
+      <section class="event-filters mb-4" aria-label="Event category filters">
+        <span class="filter-label text-mono">Filter:</span>
+        <div id="filterButtons" class="filter-aniverse"></div>
+      </section>
+
+      <div class="row g-4">
+        <div class="col-lg-8">
+          <section id="featuredEvent" class="event-featured-card mb-4" aria-label="Featured event"></section>
+          <section>
+            <div class="section-heading-wrapper mb-3">
+              <h2 class="section-label-mono">All events</h2>
+            </div>
+            <div id="eventsList" class="event-list"></div>
+          </section>
+        </div>
+
+        <aside class="col-lg-4">
+          <div class="event-side-panel mb-4">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <button id="prevMonth" class="btn btn-sm btn-outline-secondary" aria-label="Previous month">←</button>
+              <h3 class="section-label-mono mb-0" id="calendarTitle">April 2026</h3>
+              <button id="nextMonth" class="btn btn-sm btn-outline-secondary" aria-label="Next month">→</button>
+            </div>
+            <div id="eventCalendar" class="event-calendar"></div>
+          </div>
+          <div id="selectedDayEvents" class="event-side-panel mb-4 d-none">
+            <h3 class="section-label-mono mb-3">Events on <span id="selectedDate"></span></h3>
+            <ul id="dayEventsList" class="event-summary-list list-unstyled mb-0"></ul>
+          </div>
+          <div class="event-side-panel mb-4">
+            <h3 class="section-label-mono mb-3">Nearby events</h3>
+            <ul id="nearbyEvents" class="event-summary-list list-unstyled mb-0"></ul>
+          </div>
+          <div class="event-side-panel">
+            <h3 class="section-label-mono mb-3">Your RSVPs</h3>
+            <ul id="yourRsvps" class="event-summary-list list-unstyled mb-0"></ul>
+          </div>
+        </aside>
       </div>
     </div>
+  </main>
 
-    <main id="main-content" class="py-4 py-lg-5">
-      <div class="container aniverse-wrap">
-        <section class="events-hero mb-4">
-          <div>
-            <div class="eyebrow text-mono text-uppercase text-muted mb-3">ANIVERSE / EVENTS</div>
-            <h1 class="page-title-split mb-2"><span class="part-muted">Upcoming</span> <span class="part-accent">Events</span></h1>
-            <p class="page-sub-mono mb-3">Conventions, competitions, screenings and workshops. RSVP to save your spot — stored for your session.</p>
-          </div>
-          <div class="events-stat-card" aria-live="polite" aria-atomic="true">
-            <span id="rsvpCount" class="stat-value">0</span>
-            <span class="stat-label">Events RSVP'd</span>
-          </div>
-        </section>
-
-        <section class="event-filters mb-4" aria-label="Event category filters">
-          <span class="filter-label text-mono">Filter:</span>
-          <div id="filterButtons" class="filter-aniverse"></div>
-        </section>
-
-        <div class="row g-4">
-          <div class="col-lg-8">
-            <section id="featuredEvent" class="event-featured-card mb-4" aria-label="Featured event"></section>
-            <section>
-              <div class="section-heading-wrapper mb-3">
-                <h2 class="section-label-mono">All events</h2>
+  <div class="modal fade" id="rsvpModal" tabindex="-1" aria-labelledby="rsvpModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content modal-rsvp-card">
+        <button type="button" class="btn-close modal-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <div class="modal-body">
+          <div id="rsvpFormView">
+            <p class="text-mono text-muted mb-1" id="rsvpModalLocation"></p>
+            <h2 class="event-title mb-3" id="rsvpModalHeading">RSVP</h2>
+            <form id="rsvpForm" novalidate>
+              <input type="hidden" id="rsvpEventId" name="eventId" value="" />
+              <div class="mb-3">
+                <label for="rsvpName" class="form-label">Your name</label>
+                <input type="text" class="form-control form-control-dark" id="rsvpName" name="name" required
+                  minlength="2" autocomplete="name" placeholder="e.g. Sakura Tanaka" />
+                <div class="invalid-feedback">Please enter your name.</div>
               </div>
-              <div id="eventsList" class="event-list"></div>
-            </section>
+              <div class="mb-3">
+                <label for="rsvpEmail" class="form-label">Email address</label>
+                <input type="email" class="form-control form-control-dark" id="rsvpEmail" name="email"
+                  autocomplete="email" placeholder="your@email.com" />
+              </div>
+              <div class="mb-3">
+                <label for="rsvpTickets" class="form-label">Tickets</label>
+                <select class="form-select form-select-dark" id="rsvpTickets" name="tickets">
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                </select>
+              </div>
+              <button type="submit" class="btn btn-accent btn-rsvp-confirm w-100">Confirm RSVP</button>
+            </form>
           </div>
 
-          <aside class="col-lg-4">
-            <div class="event-side-panel mb-4">
-              <div class="d-flex justify-content-between align-items-center mb-3">
-                <button id="prevMonth" class="btn btn-sm btn-outline-secondary" aria-label="Previous month">←</button>
-                <h3 class="section-label-mono mb-0" id="calendarTitle">April 2026</h3>
-                <button id="nextMonth" class="btn btn-sm btn-outline-secondary" aria-label="Next month">→</button>
-              </div>
-              <div id="eventCalendar" class="event-calendar"></div>
-            </div>
-            <div id="selectedDayEvents" class="event-side-panel mb-4 d-none">
-              <h3 class="section-label-mono mb-3">Events on <span id="selectedDate"></span></h3>
-              <ul id="dayEventsList" class="event-summary-list list-unstyled mb-0"></ul>
-            </div>
-            <div class="event-side-panel mb-4">
-              <h3 class="section-label-mono mb-3">Nearby events</h3>
-              <ul id="nearbyEvents" class="event-summary-list list-unstyled mb-0"></ul>
-            </div>
-            <div class="event-side-panel">
-              <h3 class="section-label-mono mb-3">Your RSVPs</h3>
-              <ul id="yourRsvps" class="event-summary-list list-unstyled mb-0"></ul>
-            </div>
-          </aside>
-        </div>
-      </div>
-    </main>
-
-    <div class="modal fade" id="rsvpModal" tabindex="-1" aria-labelledby="rsvpModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered modal-lg">
-        <div class="modal-content modal-rsvp-card">
-          <button type="button" class="btn-close modal-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          <div class="modal-body">
-            <div id="rsvpFormView">
-              <p class="text-mono text-muted mb-1" id="rsvpModalLocation"></p>
-              <h2 class="event-title mb-3" id="rsvpModalHeading">RSVP</h2>
-              <form id="rsvpForm" novalidate>
-                <input type="hidden" id="rsvpEventId" name="eventId" value="" />
-                <div class="mb-3">
-                  <label for="rsvpName" class="form-label">Your name</label>
-                  <input type="text" class="form-control form-control-dark" id="rsvpName" name="name" required minlength="2" autocomplete="name" placeholder="e.g. Sakura Tanaka" />
-                  <div class="invalid-feedback">Please enter your name.</div>
-                </div>
-                <div class="mb-3">
-                  <label for="rsvpEmail" class="form-label">Email address</label>
-                  <input type="email" class="form-control form-control-dark" id="rsvpEmail" name="email" autocomplete="email" placeholder="your@email.com" />
-                </div>
-                <div class="mb-3">
-                  <label for="rsvpTickets" class="form-label">Tickets</label>
-                  <select class="form-select form-select-dark" id="rsvpTickets" name="tickets">
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                  </select>
-                </div>
-                <button type="submit" class="btn btn-accent btn-rsvp-confirm w-100">Confirm RSVP</button>
-              </form>
-            </div>
-
-            <div id="rsvpSuccessView" class="rsvp-success-view d-none text-center">
-              <div class="success-icon">✓</div>
-              <h2 class="h4 mb-2">You’re RSVP’d!</h2>
-              <p class="text-mono text-muted mb-1" id="rsvpSuccessEvent"></p>
-              <p class="text-mono text-muted mb-3" id="rsvpSuccessDate"></p>
-              <p class="small text-muted">Your spot is confirmed for this session!</p>
-            </div>
+          <div id="rsvpSuccessView" class="rsvp-success-view d-none text-center">
+            <div class="success-icon">✓</div>
+            <h2 class="h4 mb-2">You’re RSVP’d!</h2>
+            <p class="text-mono text-muted mb-1" id="rsvpSuccessEvent"></p>
+            <p class="text-mono text-muted mb-3" id="rsvpSuccessDate"></p>
+            <p class="small text-muted">Your spot is confirmed for this session!</p>
           </div>
         </div>
       </div>
     </div>
+  </div>
 
-    <div class="modal fade" id="eventDetailsModal" tabindex="-1" aria-labelledby="eventDetailsModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered modal-xl">
-        <div class="modal-content modal-details-card">
-          <button type="button" class="btn-close modal-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          <div class="modal-body p-0">
-            <div class="detail-image-wrapper">
-              <img id="detailImage" src="" alt="Event reference image" />
-            </div>
-            <div class="p-4">
-              <p class="text-mono text-muted mb-1" id="detailVenue"></p>
-              <h2 class="event-title mb-2" id="detailHeading"></h2>
-              <p class="event-featured-meta mb-3" id="detailDate"></p>
-              <div id="detailTags" class="event-card-tags mb-3"></div>
-              <p class="event-featured-description" id="detailDescription"></p>
-              <div class="d-flex flex-wrap gap-3 mt-4">
-                <button type="button" class="btn btn-accent btn-rsvp-bracket rsvp-open" data-event-id="" data-event-title="">RSVP</button>
-                <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
-              </div>
+  <div class="modal fade" id="eventDetailsModal" tabindex="-1" aria-labelledby="eventDetailsModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+      <div class="modal-content modal-details-card">
+        <button type="button" class="btn-close modal-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <div class="modal-body p-0">
+          <div class="detail-image-wrapper">
+            <img id="detailImage" src="" alt="Event reference image" />
+          </div>
+          <div class="p-4">
+            <p class="text-mono text-muted mb-1" id="detailVenue"></p>
+            <h2 class="event-title mb-2" id="detailHeading"></h2>
+            <p class="event-featured-meta mb-3" id="detailDate"></p>
+            <div id="detailTags" class="event-card-tags mb-3"></div>
+            <p class="event-featured-description" id="detailDescription"></p>
+            <div class="d-flex flex-wrap gap-3 mt-4">
+              <button type="button" class="btn btn-accent btn-rsvp-bracket rsvp-open" data-event-id=""
+                data-event-title="">RSVP</button>
+              <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
             </div>
           </div>
         </div>
       </div>
     </div>
+  </div>
 
-    <footer class="site-footer py-5 mt-5">
-      <div class="container aniverse-wrap">
-        <div class="row g-4 align-items-start">
-          <div class="col-12 col-xl-4">
-            <div class="footer-brand mb-2">
-              <span class="brand-logo"
-                ><span class="brand-ani">ANI</span><span class="brand-verse">VERSE</span></span
-              >
-            </div>
-            <p class="footer-tagline">
-              Your central hub for anime news, cosplay galleries, events, and community. Powered by passion, built for fans.
-            </p>
-            <p class="footer-col-title mt-4">Follow us</p>
-            <div class="footer-social">
-              <a href="https://twitter.com/intent/tweet?text=ANIVERSE" target="_blank" rel="noopener noreferrer">[ TWITTER / X ]</a>
-              <a href="#">[ INSTAGRAM ]</a>
-              <a href="#">[ DISCORD ]</a>
-              <a href="#">[ YOUTUBE ]</a>
-            </div>
+  <footer class="site-footer py-5 mt-5">
+    <div class="container aniverse-wrap">
+      <div class="row g-4 align-items-start">
+        <div class="col-12 col-xl-4">
+          <div class="footer-brand mb-2">
+            <span class="brand-logo"><span class="brand-ani">ANI</span><span class="brand-verse">VERSE</span></span>
           </div>
-          <div class="col-6 col-md-4 col-xl-2">
-            <p class="footer-col-title">Navigate</p>
-            <ul class="footer-links">
-              <li><a href="index.html">Home</a></li>
-              <li><a href="news.html">News</a></li>
-              <li><a href="gallery.html">Gallery</a></li>
-              <li><a href="events.html">Events</a></li>
-            </ul>
-          </div>
-          <div class="col-6 col-md-4 col-xl-2">
-            <p class="footer-col-title">Community</p>
-            <ul class="footer-links">
-              <li><a href="community.html">Polls</a></li>
-              <li><a href="community.html">Comments</a></li>
-              <li><a href="contact.html">Contact</a></li>
-            </ul>
-          </div>
-          <div class="col-12 col-md-4 col-xl-4">
-            <p class="footer-col-title">About Us</p>
-            <p class="footer-meta mb-0">
-              ANIVERSE is your central hub for anime news, cosplay galleries, events, and a thriving fan community. We connect anime enthusiasts across the region through live discussions, community polls, and exclusive event coverage. Join thousands of fans today.
-            </p>
-            <p class="footer-col-title mt-4">Explore</p>
-            <ul class="footer-links">
-              <li><a href="news.html">Anime catalog</a></li>
-              <li><a href="gallery.html">Cosplay grid</a></li>
-              <li><a href="events.html">Event RSVPs</a></li>
-            </ul>
+          <p class="footer-tagline">
+            Your central hub for anime news, cosplay galleries, events, and community. Powered by passion, built for
+            fans.
+          </p>
+          <p class="footer-col-title mt-4">Follow us</p>
+          <div class="footer-social">
+            <a href="https://www.instagram.com/aniverse.kr?igsh=anVpbnV3ZGppNGY3" target="_blank"
+              rel="noopener noreferrer">[ INSTAGRAM ]</a>
+            <a href="https://discord.gg/TEzRjM5B" target="_blank" rel="noopener noreferrer">[ DISCORD ]</a>
+            <a href="https://www.youtube.com/@AniverseMedia" target="_blank" rel="noopener noreferrer">[ YOUTUBE ]</a>
           </div>
         </div>
-        <p class="footer-copy text-center pt-4 mt-4 mb-0 border-top" style="border-color: var(--border) !important">
-          &copy; 2026 ANIVERSE
-        </p>
+        <div class="col-6 col-md-4 col-xl-2">
+          <p class="footer-col-title">Navigate</p>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="news.html">News</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="events.html">Events</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-4 col-xl-2">
+          <p class="footer-col-title">Community</p>
+          <ul class="footer-links">
+            <li><a href="community.html">Polls</a></li>
+            <li><a href="community.html">Comments</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-12 col-md-4 col-xl-4">
+          <p class="footer-col-title">About Us</p>
+          <p class="footer-meta mb-0">
+            ANIVERSE is your central hub for anime news, cosplay galleries, events, and a thriving fan community. We
+            connect anime enthusiasts across the region through live discussions, community polls, and exclusive event
+            coverage. Join thousands of fans today.
+          </p>
+          <p class="footer-col-title mt-4">Explore</p>
+          <ul class="footer-links">
+            <li><a href="news.html">Anime catalog</a></li>
+            <li><a href="gallery.html">Cosplay grid</a></li>
+            <li><a href="events.html">Event RSVPs</a></li>
+          </ul>
+        </div>
       </div>
-    </footer>
+      <p class="footer-copy text-center pt-4 mt-4 mb-0 border-top" style="border-color: var(--border) !important">
+        &copy; 2026 ANIVERSE
+      </p>
+    </div>
+  </footer>
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"
-    ></script>
-    <script src="js/storage.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/events.js"></script>
-  </body>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/events.js"></script>
+</body>
+
 </html>

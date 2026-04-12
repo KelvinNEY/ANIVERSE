@@ -1,46 +1,68 @@
 # ANIVERSE (Anime News & Cosplay Hub)
 
-Student front-end demo styled from **`Demo Design/Design.docx`** mockups: cyberpunk **dark** theme (neon pink / cyan / purple, grid background, mono UI) and a **light** theme (scanline-style grey background). Six Bootstrap pages: anime catalog (**Jikan** + JSON fallback), cosplay gallery (**localStorage** favorites), events (**sessionStorage** RSVP), community poll + comments (local demo only), contact form + optional **cookies**, theme toggle (**localStorage** + cookie mirror).
+Front-End website built as a static anime and cosplay portal with responsive Bootstrap styling, theme toggling, storage interactions, and a cosplay gallery.
+
+## Features
+
+- **Dark / light theme toggle** with localStorage persistence
+- **News page** using the Jikan API plus JSON fallback data
+- **Gallery page** with cosplay images, favorites, and a spotlight video
+- **Events RSVP** with sessionStorage behavior
+- **Community page** with a poll and comment-style demo content
+- **Contact page** with form validation, remember-me cookies, and follow-us links
+
+## Current gallery setup
+
+The gallery loads image files from `assets/images/gallery-1.png` through `gallery-8.png`.
+The gallery also includes an embedded cosplay spotlight video on `gallery.html`.
 
 ## How to run
 
 ### Option A — Local dev server (recommended)
 
-Uses [Vite](https://vitejs.dev/) so `fetch` works reliably for `/assets/data/news-fallback.json` and the Jikan API.
+This project uses [Vite](https://vitejs.dev/) so relative fetch requests and assets work correctly.
 
 ```bash
 npm install
 npm run dev
 ```
 
-Open the URL Vite prints (usually **http://localhost:5173/**) and navigate with the navbar (`/news.html`, `/gallery.html`, etc.).
+Open the local URL printed by Vite (typically `http://localhost:5173/`). Use the navbar to visit `index.html`, `news.html`, `gallery.html`, `events.html`, `community.html`, and `contact.html`.
 
 ### Option B — Open files directly
 
-Double-click **`index.html`** or open it from your browser. Some browsers restrict `file://` fetches; if the News page cannot load the fallback JSON, use Option A.
+You can open `index.html` in a browser, but some modern browsers block local `fetch()` requests. If the News page does not load correctly, use Option A.
 
 ## Pages
 
-| Page        | File           | Highlights                                      |
-| ----------- | -------------- | ----------------------------------------------- |
-| Home        | `index.html`   | Carousel (WebP), sidebar, share links           |
-| News        | `news.html`    | Jikan API + `assets/data/news-fallback.json`    |
-| Gallery     | `gallery.html` | WebP grid, lazy loading, favorites              |
-| Events      | `events.html`  | RSVP modal, sessionStorage                      |
-| Community   | `community.html` | Poll “Best Anime of 2025”, comments (demo)  |
-| Contact     | `contact.html` | Validation, FAQ accordion, remember-me cookie   |
+| Page      | File             | Highlights |
+| --------- | ---------------- | ---------- |
+| Home      | `index.html`     | Landing welcome page with navigation and site overview |
+| News      | `news.html`      | Anime news feed with Jikan API + fallback JSON |
+| Gallery   | `gallery.html`   | Cosplay image grid, favorites, and YouTube spotlight video |
+| Events    | `events.html`    | Event cards and RSVP modal with sessionStorage state |
+| Community | `community.html` | Demo community poll and comment feed |
+| Contact   | `contact.html`   | Form validation, remember-me cookie, follow-us links |
 
-## Tech
+## Tech stack
 
-- HTML5, CSS3, JavaScript (ES5/ES6-style IIFEs)
-- Bootstrap 5.3 (CDN), Bootstrap Icons
-- Storage: `localStorage`, `sessionStorage`, cookies
+- HTML5, CSS3, JavaScript
+- Bootstrap 5.3 via CDN
+- Bootstrap Icons
+- Vite for local development and build
+- Browser storage: `localStorage`, `sessionStorage`, cookies
 
-## Build (optional)
+## Build and preview
 
 ```bash
 npm run build
 npm run preview
 ```
 
-Output is in `dist/`; adjust paths if you deploy to a subfolder.
+The built site is written to `dist/`.
+
+## Notes
+
+- Place your cosplay images in `assets/images/` with names matching `gallery-1.png` through `gallery-8.png`
+- The contact page now uses direct follow links for Instagram, Discord, and YouTube
+- If you deploy to a static host, the site is ready as a plain static frontend

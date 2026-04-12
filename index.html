@@ -1,336 +1,283 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta
-      name="description"
-      content="ANIVERSE — anime news, cosplay galleries, events, and community."
-    />
-    <title>Home | ANIVERSE</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;0,9..40,700&family=JetBrains+Mono:wght@400;600;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
-    />
-    <link rel="stylesheet" href="css/styles.css" />
-  </head>
-  <body>
-    <a class="skip-link" href="#main-content">Skip to main content</a>
 
-    <header class="site-header">
-      <nav class="navbar navbar-expand-lg" aria-label="Main navigation">
-        <div class="container aniverse-wrap">
-          <a class="navbar-brand brand-logo" href="index.html"
-            ><span class="brand-ani">ANI</span><span class="brand-verse">VERSE</span></a
-          >
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navMain"
-            aria-controls="navMain"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="ANIVERSE — anime news, cosplay galleries, events, and community." />
+  <title>Home | ANIVERSE</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;0,9..40,700&family=JetBrains+Mono:wght@400;600;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap"
+    rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <nav class="navbar navbar-expand-lg" aria-label="Main navigation">
+      <div class="container aniverse-wrap">
+        <a class="navbar-brand brand-logo" href="index.html"><span class="brand-ani">ANI</span><span
+            class="brand-verse">VERSE</span></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain"
+          aria-controls="navMain" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navMain">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0 nav-aniverse">
+            <li class="nav-item">
+              <a class="nav-link" data-nav href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-nav href="news.html">News</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-nav href="gallery.html">Gallery</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-nav href="events.html">Events</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-nav href="community.html">Community</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-nav href="contact.html">Contact</a>
+            </li>
+          </ul>
+          <button type="button" class="btn btn-sm ms-lg-3" id="themeToggle" aria-pressed="true"
+            aria-label="Switch theme">
+            <span class="theme-toggle-label">LIGHT</span>
           </button>
-          <div class="collapse navbar-collapse" id="navMain">
-            <ul class="navbar-nav mx-auto mb-2 mb-lg-0 nav-aniverse">
-              <li class="nav-item">
-                <a class="nav-link" data-nav href="index.html">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" data-nav href="news.html">News</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" data-nav href="gallery.html">Gallery</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" data-nav href="events.html">Events</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" data-nav href="community.html">Community</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" data-nav href="contact.html">Contact</a>
-              </li>
-            </ul>
-            <button
-              type="button"
-              class="btn btn-sm ms-lg-3"
-              id="themeToggle"
-              aria-pressed="true"
-              aria-label="Switch theme"
-            >
-              <span class="theme-toggle-label">LIGHT</span>
-            </button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <div class="news-ticker" role="region" aria-label="Headline ticker">
+    <div class="news-ticker-track">
+      <span class="ticker-part">★ COSPLAY WORLD CUP REGISTRATION OPENS MAY 1 ★ JUJUTSU KAISEN MOVIE TRAILER ★ CHAINSAW
+        MAN PART 3 SERIALIZATION ★ COMIC FIESTA 2026 TICKETS ★
+      </span>
+      <span class="ticker-part" aria-hidden="true">★ COSPLAY WORLD CUP REGISTRATION OPENS MAY 1 ★ JUJUTSU KAISEN MOVIE
+        TRAILER ★ CHAINSAW MAN PART 3 SERIALIZATION ★ COMIC FIESTA 2026 TICKETS ★
+      </span>
+    </div>
+  </div>
+
+  <main id="main-content" class="py-4 py-lg-5">
+    <div class="container aniverse-wrap">
+      <div class="row g-5 align-items-start">
+        <div class="col-lg-7 col-xl-8">
+          <section class="hero-cyber" aria-labelledby="hero-heading">
+            <h1 id="hero-heading" class="mt-3 mb-3">
+              <span class="hero-title-line display-3 text-uppercase d-block hero-text-adapt text-white">The
+                ultimate</span>
+              <span class="hero-title-line display-3 text-uppercase d-block text-neon-pink">Anime &amp;</span>
+              <span class="hero-title-line display-3 text-uppercase d-block"><span
+                  class="text-neon-purple">Cosplay</span> <span class="hero-text-adapt text-white">hub</span></span>
+            </h1>
+            <p class="hero-sub mono mb-4">
+              News, galleries, events, and community — all in one cyberpunk-styled hub for fans who live and breathe
+              anime
+              culture.
+            </p>
+            <div class="d-flex flex-wrap gap-3 mb-2">
+              <a class="btn btn-cyber-pink" href="news.html">Explore news</a>
+              <a class="btn btn-cyber-outline" href="gallery.html">View gallery</a>
+            </div>
+            <div class="row stats-row text-center text-lg-start g-4 mt-4 pt-2">
+              <div class="col-4">
+                <div class="stat-num">12K+</div>
+                <div class="stat-label">Articles</div>
+              </div>
+              <div class="col-4">
+                <div class="stat-num">3.4K</div>
+                <div class="stat-label">Cosplayers</div>
+              </div>
+              <div class="col-4">
+                <div class="stat-num">80+</div>
+                <div class="stat-label">Events</div>
+              </div>
+            </div>
+          </section>
+
+          <section class="mt-5 pt-3" aria-labelledby="carousel-heading">
+            <p class="section-label-mono mb-2" id="carousel-heading">HIGHLIGHTS</p>
+            <div id="heroCarousel"
+              class="carousel slide carousel-fade rounded-3 overflow-hidden border border-secondary-subtle"
+              data-bs-ride="carousel" aria-label="Featured highlights">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"
+                  aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="assets/images/hero-1.png" class="d-block w-100" alt="Featured anime news highlight"
+                    width="1200" height="600" />
+                  <div class="carousel-caption text-start">
+                    <h2 class="h5 font-heading">Latest anime picks</h2>
+                    <p class="mb-2 small d-none d-md-block">Browse seasonal titles from the catalog.</p>
+                    <a class="btn btn-accent btn-sm" href="news.html">Open News</a>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img src="assets/images/hero-2.png" class="d-block w-100" alt="Cosplay and convention highlights"
+                    width="1200" height="600" />
+                  <div class="carousel-caption text-start">
+                    <h2 class="h5 font-heading">Cosplay &amp; cons</h2>
+                    <p class="mb-2 small d-none d-md-block">Plan your next event and RSVP.</p>
+                    <a class="btn btn-accent btn-sm" href="events.html">View Events</a>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img src="assets/images/hero-3.png" class="d-block w-100" alt="Community and fan discussion"
+                    width="1200" height="600" />
+                  <div class="carousel-caption text-start">
+                    <h2 class="h5 font-heading">Join the buzz</h2>
+                    <p class="mb-2 small d-none d-md-block">Polls and quick comments (demo).</p>
+                    <a class="btn btn-accent btn-sm" href="community.html">Community</a>
+                  </div>
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </section>
+        </div>
+        <div class="col-lg-5 col-xl-4">
+          <aside class="live-feed" aria-label="Live feed preview">
+            <div class="live-feed-title">LIVE FEED</div>
+            <article class="live-feed-item">
+              <div class="live-feed-user">@AniVerseHQ</div>
+              <p class="live-feed-text">
+                Just dropped: exclusive interview with the creator of Jujutsu Kaisen — link in bio! 🔥
+              </p>
+            </article>
+            <article class="live-feed-item">
+              <div class="live-feed-user">@CosplayWorld</div>
+              <p class="live-feed-text">Tokyo Game Show cosplay competition results are in — see the winners gallery
+                now!</p>
+            </article>
+            <article class="live-feed-item">
+              <div class="live-feed-user">@AnimeFestMY</div>
+              <p class="live-feed-text">Comic Fiesta 2026 tickets on sale NOW. Don’t miss early bird pricing! 🎟️</p>
+            </article>
+            <article class="live-feed-item">
+              <div class="live-feed-user">@AniVerseHQ</div>
+              <p class="live-feed-text mb-0">New poll: Best anime of 2026 — vote on the Community page.</p>
+            </article>
+          </aside>
+          <div class="card mt-3 border-secondary-subtle">
+            <div class="card-body">
+              <h2 class="h6 card-title text-mono text-uppercase small">Share</h2>
+              <p class="small text-muted mb-2">Spread the word.</p>
+              <div class="d-flex flex-wrap gap-2">
+                <a class="btn btn-sm btn-outline-secondary"
+                  href="https://twitter.com/intent/tweet?text=Check%20out%20ANIVERSE!" target="_blank"
+                  rel="noopener noreferrer">X / Twitter</a>
+                <a class="btn btn-sm btn-outline-secondary" href="https://www.facebook.com/sharer/sharer.php?u="
+                  target="_blank" rel="noopener noreferrer"
+                  onclick="this.href='https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(window.location.href);">Facebook</a>
+              </div>
+            </div>
           </div>
         </div>
-      </nav>
-    </header>
-
-    <div class="news-ticker" role="region" aria-label="Headline ticker">
-      <div class="news-ticker-track">
-        <span class="ticker-part"
-          >★ COSPLAY WORLD CUP REGISTRATION OPENS MAY 1 ★ JUJUTSU KAISEN MOVIE TRAILER ★ CHAINSAW MAN PART 3 SERIALIZATION ★ COMIC FIESTA 2026 TICKETS ★
-        </span>
-        <span class="ticker-part" aria-hidden="true"
-          >★ COSPLAY WORLD CUP REGISTRATION OPENS MAY 1 ★ JUJUTSU KAISEN MOVIE TRAILER ★ CHAINSAW MAN PART 3 SERIALIZATION ★ COMIC FIESTA 2026 TICKETS ★
-        </span>
       </div>
     </div>
+  </main>
 
-    <main id="main-content" class="py-4 py-lg-5">
-      <div class="container aniverse-wrap">
-        <div class="row g-5 align-items-start">
-          <div class="col-lg-7 col-xl-8">
-            <section class="hero-cyber" aria-labelledby="hero-heading">
-              <h1 id="hero-heading" class="mt-3 mb-3">
-                <span class="hero-title-line display-3 text-uppercase d-block hero-text-adapt text-white">The ultimate</span>
-                <span class="hero-title-line display-3 text-uppercase d-block text-neon-pink">Anime &amp;</span>
-                <span class="hero-title-line display-3 text-uppercase d-block"
-                  ><span class="text-neon-purple">Cosplay</span> <span class="hero-text-adapt text-white">hub</span></span
-                >
-              </h1>
-              <p class="hero-sub mono mb-4">
-                News, galleries, events, and community — all in one cyberpunk-styled hub for fans who live and breathe anime
-                culture.
-              </p>
-              <div class="d-flex flex-wrap gap-3 mb-2">
-                <a class="btn btn-cyber-pink" href="news.html">Explore news</a>
-                <a class="btn btn-cyber-outline" href="gallery.html">View gallery</a>
-              </div>
-              <div class="row stats-row text-center text-lg-start g-4 mt-4 pt-2">
-                <div class="col-4">
-                  <div class="stat-num">12K+</div>
-                  <div class="stat-label">Articles</div>
-                </div>
-                <div class="col-4">
-                  <div class="stat-num">3.4K</div>
-                  <div class="stat-label">Cosplayers</div>
-                </div>
-                <div class="col-4">
-                  <div class="stat-num">80+</div>
-                  <div class="stat-label">Events</div>
-                </div>
-              </div>
-            </section>
-
-            <section class="mt-5 pt-3" aria-labelledby="carousel-heading">
-              <p class="section-label-mono mb-2" id="carousel-heading">HIGHLIGHTS</p>
-              <div
-                id="heroCarousel"
-                class="carousel slide carousel-fade rounded-3 overflow-hidden border border-secondary-subtle"
-                data-bs-ride="carousel"
-                aria-label="Featured highlights"
-              >
-                <div class="carousel-indicators">
-                  <button
-                    type="button"
-                    data-bs-target="#heroCarousel"
-                    data-bs-slide-to="0"
-                    class="active"
-                    aria-current="true"
-                    aria-label="Slide 1"
-                  ></button>
-                  <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                  <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                </div>
-                <div class="carousel-inner">
-                  <div class="carousel-item active">
-                    <img
-                      src="assets/images/hero-1.webp"
-                      class="d-block w-100"
-                      alt="Featured anime news highlight"
-                      width="1200"
-                      height="600"
-                    />
-                    <div class="carousel-caption text-start">
-                      <h2 class="h5 font-heading">Latest anime picks</h2>
-                      <p class="mb-2 small d-none d-md-block">Browse seasonal titles from the catalog.</p>
-                      <a class="btn btn-accent btn-sm" href="news.html">Open News</a>
-                    </div>
-                  </div>
-                  <div class="carousel-item">
-                    <img
-                      src="assets/images/hero-2.webp"
-                      class="d-block w-100"
-                      alt="Cosplay and convention highlights"
-                      width="1200"
-                      height="600"
-                    />
-                    <div class="carousel-caption text-start">
-                      <h2 class="h5 font-heading">Cosplay &amp; cons</h2>
-                      <p class="mb-2 small d-none d-md-block">Plan your next event and RSVP.</p>
-                      <a class="btn btn-accent btn-sm" href="events.html">View Events</a>
-                    </div>
-                  </div>
-                  <div class="carousel-item">
-                    <img
-                      src="assets/images/hero-3.webp"
-                      class="d-block w-100"
-                      alt="Community and fan discussion"
-                      width="1200"
-                      height="600"
-                    />
-                    <div class="carousel-caption text-start">
-                      <h2 class="h5 font-heading">Join the buzz</h2>
-                      <p class="mb-2 small d-none d-md-block">Polls and quick comments (demo).</p>
-                      <a class="btn btn-accent btn-sm" href="community.html">Community</a>
-                    </div>
-                  </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Next</span>
-                </button>
-              </div>
-            </section>
+  <footer class="site-footer py-5">
+    <div class="container aniverse-wrap">
+      <div class="row g-4 align-items-start">
+        <div class="col-12 col-xl-4">
+          <div class="footer-brand mb-2">
+            <span class="brand-logo"><span class="brand-ani">ANI</span><span class="brand-verse">VERSE</span></span>
           </div>
-          <div class="col-lg-5 col-xl-4">
-            <aside class="live-feed" aria-label="Live feed preview">
-              <div class="live-feed-title">LIVE FEED</div>
-              <article class="live-feed-item">
-                <div class="live-feed-user">@AniVerseHQ</div>
-                <p class="live-feed-text">
-                  Just dropped: exclusive interview with the creator of Jujutsu Kaisen — link in bio! 🔥
-                </p>
-              </article>
-              <article class="live-feed-item">
-                <div class="live-feed-user">@CosplayWorld</div>
-                <p class="live-feed-text">Tokyo Game Show cosplay competition results are in — see the winners gallery now!</p>
-              </article>
-              <article class="live-feed-item">
-                <div class="live-feed-user">@AnimeFestMY</div>
-                <p class="live-feed-text">Comic Fiesta 2026 tickets on sale NOW. Don’t miss early bird pricing! 🎟️</p>
-              </article>
-              <article class="live-feed-item">
-                <div class="live-feed-user">@AniVerseHQ</div>
-                <p class="live-feed-text mb-0">New poll: Best anime of 2026 — vote on the Community page.</p>
-              </article>
-            </aside>
-            <div class="card mt-3 border-secondary-subtle">
-              <div class="card-body">
-                <h2 class="h6 card-title text-mono text-uppercase small">Share</h2>
-                <p class="small text-muted mb-2">Spread the word.</p>
-                <div class="d-flex flex-wrap gap-2">
-                  <a
-                    class="btn btn-sm btn-outline-secondary"
-                    href="https://twitter.com/intent/tweet?text=Check%20out%20ANIVERSE!"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    >X / Twitter</a
-                  >
-                  <a
-                    class="btn btn-sm btn-outline-secondary"
-                    href="https://www.facebook.com/sharer/sharer.php?u="
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    onclick="this.href='https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(window.location.href);"
-                    >Facebook</a
-                  >
-                </div>
-              </div>
-            </div>
+          <p class="footer-tagline">
+            Your central hub for anime news, cosplay galleries, events, and community. Powered by passion, built for
+            fans.
+          </p>
+          <p class="footer-col-title mt-4">Follow us</p>
+          <div class="footer-social">
+            <a href="https://www.instagram.com/aniverse.kr?igsh=anVpbnV3ZGppNGY3" target="_blank"
+              rel="noopener noreferrer">[ INSTAGRAM ]</a>
+            <a href="https://discord.gg/TEzRjM5B" target="_blank" rel="noopener noreferrer">[ DISCORD ]</a>
+            <a href="https://www.youtube.com/@AniverseMedia" target="_blank" rel="noopener noreferrer">[ YOUTUBE ]</a>
           </div>
         </div>
-      </div>
-    </main>
-
-    <footer class="site-footer py-5">
-      <div class="container aniverse-wrap">
-        <div class="row g-4 align-items-start">
-          <div class="col-12 col-xl-4">
-            <div class="footer-brand mb-2">
-              <span class="brand-logo"
-                ><span class="brand-ani">ANI</span><span class="brand-verse">VERSE</span></span
-              >
-            </div>
-            <p class="footer-tagline">
-              Your central hub for anime news, cosplay galleries, events, and community. Powered by passion, built for fans.
-            </p>
-            <p class="footer-col-title mt-4">Follow us</p>
-            <div class="footer-social">
-              <a href="https://twitter.com/intent/tweet?text=ANIVERSE" target="_blank" rel="noopener noreferrer">[ TWITTER / X ]</a>
-              <a href="#">[ INSTAGRAM ]</a>
-              <a href="#">[ DISCORD ]</a>
-              <a href="#">[ YOUTUBE ]</a>
-            </div>
-          </div>
-          <div class="col-6 col-md-4 col-xl-2">
-            <p class="footer-col-title">Navigate</p>
-            <ul class="footer-links">
-              <li><a href="index.html">Home</a></li>
-              <li><a href="news.html">News</a></li>
-              <li><a href="gallery.html">Gallery</a></li>
-              <li><a href="events.html">Events</a></li>
-            </ul>
-          </div>
-          <div class="col-6 col-md-4 col-xl-2">
-            <p class="footer-col-title">Community</p>
-            <ul class="footer-links">
-              <li><a href="community.html">Polls</a></li>
-              <li><a href="community.html">Comments</a></li>
-              <li><a href="contact.html">Contact</a></li>
-            </ul>
-          </div>
-          <div class="col-12 col-md-4 col-xl-4">
-            <p class="footer-col-title">About Us</p>
-            <p class="footer-meta mb-0">
-              ANIVERSE is your central hub for anime news, cosplay galleries, events, and a thriving fan community. We connect anime enthusiasts across the region through live discussions, community polls, and exclusive event coverage. Join thousands of fans today.
-            </p>
-            <p class="footer-col-title mt-4">Explore</p>
-            <ul class="footer-links">
-              <li><a href="news.html">Anime catalog</a></li>
-              <li><a href="gallery.html">Cosplay grid</a></li>
-              <li><a href="events.html">Event RSVPs</a></li>
-            </ul>
-          </div>
+        <div class="col-6 col-md-4 col-xl-2">
+          <p class="footer-col-title">Navigate</p>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="news.html">News</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="events.html">Events</a></li>
+          </ul>
         </div>
-        <p class="footer-copy text-center pt-4 mt-4 mb-0 border-top" style="border-color: var(--border) !important">
-          &copy; 2026 ANIVERSE
-        </p>
+        <div class="col-6 col-md-4 col-xl-2">
+          <p class="footer-col-title">Community</p>
+          <ul class="footer-links">
+            <li><a href="community.html">Polls</a></li>
+            <li><a href="community.html">Comments</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-12 col-md-4 col-xl-4">
+          <p class="footer-col-title">About Us</p>
+          <p class="footer-meta mb-0">
+            ANIVERSE is your central hub for anime news, cosplay galleries, events, and a thriving fan community. We
+            connect anime enthusiasts across the region through live discussions, community polls, and exclusive event
+            coverage. Join thousands of fans today.
+          </p>
+          <p class="footer-col-title mt-4">Explore</p>
+          <ul class="footer-links">
+            <li><a href="news.html">Anime catalog</a></li>
+            <li><a href="gallery.html">Cosplay grid</a></li>
+            <li><a href="events.html">Event RSVPs</a></li>
+          </ul>
+        </div>
       </div>
-    </footer>
+      <p class="footer-copy text-center pt-4 mt-4 mb-0 border-top" style="border-color: var(--border) !important">
+        &copy; 2026 ANIVERSE
+      </p>
+    </div>
+  </footer>
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"
-    ></script>
-    <script src="js/storage.js"></script>
-    <script src="js/main.js"></script>
-    <script>
-      (function () {
-        function syncHeroText() {
-          var light = document.documentElement.getAttribute('data-theme') === 'light';
-          document.querySelectorAll('.hero-text-adapt').forEach(function (el) {
-            el.classList.toggle('text-dark', light);
-            el.classList.toggle('text-white', !light);
-          });
-        }
-        document.addEventListener('DOMContentLoaded', syncHeroText);
-        new MutationObserver(syncHeroText).observe(document.documentElement, {
-          attributes: true,
-          attributeFilter: ['data-theme'],
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    (function () {
+      function syncHeroText() {
+        var light = document.documentElement.getAttribute('data-theme') === 'light';
+        document.querySelectorAll('.hero-text-adapt').forEach(function (el) {
+          el.classList.toggle('text-dark', light);
+          el.classList.toggle('text-white', !light);
         });
-      })();
-    </script>
-  </body>
+      }
+      document.addEventListener('DOMContentLoaded', syncHeroText);
+      new MutationObserver(syncHeroText).observe(document.documentElement, {
+        attributes: true,
+        attributeFilter: ['data-theme'],
+      });
+    })();
+  </script>
+</body>
+
 </html>

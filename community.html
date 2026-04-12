@@ -1,246 +1,251 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="ANIVERSE community — poll and comments (local demo)." />
-    <title>Community | ANIVERSE</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;0,9..40,700&family=JetBrains+Mono:wght@400;600;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
-    <link rel="stylesheet" href="css/styles.css" />
-  </head>
-  <body>
-    <a class="skip-link" href="#main-content">Skip to main content</a>
-    <header class="site-header">
-      <nav class="navbar navbar-expand-lg" aria-label="Main navigation">
-        <div class="container aniverse-wrap">
-          <a class="navbar-brand brand-logo" href="index.html"
-            ><span class="brand-ani">ANI</span><span class="brand-verse">VERSE</span></a
-          >
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navMain"
-            aria-controls="navMain"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="ANIVERSE community — poll and comments (local demo)." />
+  <title>Community | ANIVERSE</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;0,9..40,700&family=JetBrains+Mono:wght@400;600;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap"
+    rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <nav class="navbar navbar-expand-lg" aria-label="Main navigation">
+      <div class="container aniverse-wrap">
+        <a class="navbar-brand brand-logo" href="index.html"><span class="brand-ani">ANI</span><span
+            class="brand-verse">VERSE</span></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain"
+          aria-controls="navMain" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navMain">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0 nav-aniverse">
+            <li class="nav-item"><a class="nav-link" data-nav href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" data-nav href="news.html">News</a></li>
+            <li class="nav-item"><a class="nav-link" data-nav href="gallery.html">Gallery</a></li>
+            <li class="nav-item"><a class="nav-link" data-nav href="events.html">Events</a></li>
+            <li class="nav-item"><a class="nav-link" data-nav href="community.html">Community</a></li>
+            <li class="nav-item"><a class="nav-link" data-nav href="contact.html">Contact</a></li>
+          </ul>
+          <button type="button" class="btn btn-sm ms-lg-3" id="themeToggle" aria-pressed="false"
+            aria-label="Switch theme">
+            <span class="theme-toggle-label">DARK</span>
           </button>
-          <div class="collapse navbar-collapse" id="navMain">
-            <ul class="navbar-nav mx-auto mb-2 mb-lg-0 nav-aniverse">
-              <li class="nav-item"><a class="nav-link" data-nav href="index.html">Home</a></li>
-              <li class="nav-item"><a class="nav-link" data-nav href="news.html">News</a></li>
-              <li class="nav-item"><a class="nav-link" data-nav href="gallery.html">Gallery</a></li>
-              <li class="nav-item"><a class="nav-link" data-nav href="events.html">Events</a></li>
-              <li class="nav-item"><a class="nav-link" data-nav href="community.html">Community</a></li>
-              <li class="nav-item"><a class="nav-link" data-nav href="contact.html">Contact</a></li>
-            </ul>
-            <button type="button" class="btn btn-sm ms-lg-3" id="themeToggle" aria-pressed="false" aria-label="Switch theme">
-              <span class="theme-toggle-label">DARK</span>
-            </button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <div class="news-ticker" role="region" aria-label="Headline ticker">
+    <div class="news-ticker-track">
+      <span class="ticker-part">★ COMMUNITY POLL LIVE ★ COMMENT BELOW ★ NOT A REAL FORUM ★ </span>
+      <span class="ticker-part" aria-hidden="true">★ COMMUNITY POLL LIVE ★ COMMENT BELOW ★ NOT A REAL FORUM ★ </span>
+    </div>
+  </div>
+
+  <main id="main-content" class="py-4 py-lg-5">
+    <div class="container aniverse-wrap">
+      <div class="community-hero mb-5">
+        <p class="breadcrumb-mono text-muted mb-2">ANIVERSE / <span class="text-accent">COMMUNITY</span></p>
+        <h1 class="page-title-split mb-3"><span class="part-accent">FAN</span> <span
+            class="part-heading">COMMUNITY</span></h1>
+        <p class="community-intro text-muted mb-4">Vote in polls, join the discussion, and connect with fans from across
+          the region.</p>
+
+        <div class="row g-3 community-stats-row">
+          <div class="col-6 col-sm-3">
+            <div class="community-stat-card">
+              <span class="stat-value">12.4K</span>
+              <span class="stat-label">Members</span>
+            </div>
+          </div>
+          <div class="col-6 col-sm-3">
+            <div class="community-stat-card">
+              <span class="stat-value">2,841</span>
+              <span class="stat-label">Online</span>
+            </div>
+          </div>
+          <div class="col-6 col-sm-3">
+            <div class="community-stat-card">
+              <span class="stat-value">4</span>
+              <span class="stat-label">Comments</span>
+            </div>
+          </div>
+          <div class="col-6 col-sm-3">
+            <div class="community-stat-card">
+              <span class="stat-value">8</span>
+              <span class="stat-label">Active polls</span>
+            </div>
           </div>
         </div>
-      </nav>
-    </header>
+      </div>
 
-    <div class="news-ticker" role="region" aria-label="Headline ticker">
-      <div class="news-ticker-track">
-        <span class="ticker-part">★ COMMUNITY POLL LIVE ★ COMMENT BELOW ★ NOT A REAL FORUM ★ </span>
-        <span class="ticker-part" aria-hidden="true">★ COMMUNITY POLL LIVE ★ COMMENT BELOW ★ NOT A REAL FORUM ★ </span>
+      <div class="row g-4">
+        <div class="col-lg-8">
+          <section class="community-panel p-4 mb-4" aria-labelledby="active-polls-heading">
+            <div class="d-flex flex-column flex-sm-row justify-content-between align-items-sm-end gap-3 mb-4">
+              <div>
+                <div class="poll-header-mono" id="active-polls-heading">Active polls</div>
+                <p class="text-muted small mb-0">Click an option to cast your vote — saved to your browser.</p>
+              </div>
+            </div>
+            <div id="pollList" class="community-polls-list"></div>
+          </section>
+
+          <section class="community-panel p-4" aria-labelledby="fan-discussion-heading">
+            <div class="d-flex align-items-center justify-content-between gap-3 mb-4">
+              <div>
+                <div class="poll-header-mono" id="fan-discussion-heading">Fan discussion</div>
+                <p class="text-muted small mb-0">Share your thoughts — comments saved locally.</p>
+              </div>
+            </div>
+            <form id="commentForm" class="comment-form mb-4" novalidate>
+              <div class="row g-3 mb-3">
+                <div class="col-sm-6">
+                  <label for="commentName" class="form-label text-mono small">Your name</label>
+                  <input type="text" class="form-control form-control-dark" id="commentName" required minlength="1"
+                    maxlength="40" />
+                  <div class="invalid-feedback">Enter a display name.</div>
+                </div>
+                <div class="col-sm-6">
+                  <label for="commentTag" class="form-label text-mono small">Topic tag (e.g. Anime)</label>
+                  <input type="text" class="form-control form-control-dark" id="commentTag" maxlength="25"
+                    placeholder="Optional" />
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="commentText" class="form-label text-mono small">What’s on your mind?</label>
+                <textarea class="form-control form-control-dark" id="commentText" rows="4" required minlength="1"
+                  maxlength="300"></textarea>
+                <div class="invalid-feedback">Enter a message.</div>
+              </div>
+              <button type="submit" class="btn btn-accent btn-lg">Post Comment</button>
+            </form>
+            <div id="commentList" class="comment-list"></div>
+          </section>
+        </div>
+
+        <div class="col-lg-4">
+          <aside class="community-sidebar">
+            <section class="community-panel p-4 mb-4">
+              <div class="sidebar-title">Top contributors</div>
+              <ol class="top-contributors-list list-unstyled mb-0">
+                <li><span class="contributor-rank">01</span> <span class="contributor-name">@sakura_crafts</span> <span
+                    class="contributor-score">2,840</span></li>
+                <li><span class="contributor-rank">02</span> <span class="contributor-name">@rin_crafts</span> <span
+                    class="contributor-score">2,105</span></li>
+                <li><span class="contributor-rank">03</span> <span class="contributor-name">@eva_pilot_k1</span> <span
+                    class="contributor-score">1,890</span></li>
+                <li><span class="contributor-rank muted">04</span> <span
+                    class="contributor-name muted">@moon_princess</span> <span
+                    class="contributor-score muted">1,340</span></li>
+                <li><span class="contributor-rank muted">05</span> <span
+                    class="contributor-name muted">@infinity_cos</span> <span
+                    class="contributor-score muted">1,180</span></li>
+              </ol>
+            </section>
+
+            <section class="community-panel p-4 mb-4">
+              <div class="sidebar-title">Recent activity</div>
+              <ul class="recent-activity-list list-unstyled mb-0">
+                <li><span class="text-accent">@sakura_crafts</span> submitted a new cosplay</li>
+                <li><span class="text-accent">@hokage_fan</span> voted in 2 polls</li>
+                <li><span class="text-accent">@rin_crafts</span> posted a comment</li>
+                <li>12 users joined today</li>
+                <li>New poll added: Best Studio 2026</li>
+              </ul>
+            </section>
+
+            <section class="community-panel p-4">
+              <div class="sidebar-title">Latest comments</div>
+              <ul class="recent-comments-list list-unstyled mb-0">
+                <li><span class="comment-user">aeva_pilot_k1</span> Comic Fiesta 2026 tickets are going FAST. Grabbed
+                  mine this morning!</li>
+                <li><span class="comment-user">asakura_crafts</span> My Nezuko build got featured in the gallery! Thank
+                  you AniVerse community 🙏</li>
+                <li><span class="comment-user">arin_crafts</span> Ready for the next cosplay meetup — hope to see
+                  everyone there.</li>
+              </ul>
+            </section>
+          </aside>
+        </div>
       </div>
     </div>
+  </main>
 
-    <main id="main-content" class="py-4 py-lg-5">
-      <div class="container aniverse-wrap">
-        <div class="community-hero mb-5">
-          <p class="breadcrumb-mono text-muted mb-2">ANIVERSE / <span class="text-accent">COMMUNITY</span></p>
-          <h1 class="page-title-split mb-3"><span class="part-accent">FAN</span> <span class="part-heading">COMMUNITY</span></h1>
-          <p class="community-intro text-muted mb-4">Vote in polls, join the discussion, and connect with fans from across the region.</p>
-
-          <div class="row g-3 community-stats-row">
-            <div class="col-6 col-sm-3">
-              <div class="community-stat-card">
-                <span class="stat-value">12.4K</span>
-                <span class="stat-label">Members</span>
-              </div>
-            </div>
-            <div class="col-6 col-sm-3">
-              <div class="community-stat-card">
-                <span class="stat-value">2,841</span>
-                <span class="stat-label">Online</span>
-              </div>
-            </div>
-            <div class="col-6 col-sm-3">
-              <div class="community-stat-card">
-                <span class="stat-value">4</span>
-                <span class="stat-label">Comments</span>
-              </div>
-            </div>
-            <div class="col-6 col-sm-3">
-              <div class="community-stat-card">
-                <span class="stat-value">8</span>
-                <span class="stat-label">Active polls</span>
-              </div>
-            </div>
+  <footer class="site-footer py-5">
+    <div class="container aniverse-wrap">
+      <div class="row g-4 align-items-start">
+        <div class="col-12 col-xl-4">
+          <div class="footer-brand mb-2">
+            <span class="brand-logo"><span class="brand-ani">ANI</span><span class="brand-verse">VERSE</span></span>
+          </div>
+          <p class="footer-tagline">
+            Your central hub for anime news, cosplay galleries, events, and community. Powered by passion, built for
+            fans.
+          </p>
+          <p class="footer-col-title mt-4">Follow us</p>
+          <div class="footer-social">
+            <a href="https://www.instagram.com/aniverse.kr?igsh=anVpbnV3ZGppNGY3" target="_blank"
+              rel="noopener noreferrer">[ INSTAGRAM ]</a>
+            <a href="https://discord.gg/TEzRjM5B" target="_blank" rel="noopener noreferrer">[ DISCORD ]</a>
+            <a href="https://www.youtube.com/@AniverseMedia" target="_blank" rel="noopener noreferrer">[ YOUTUBE ]</a>
           </div>
         </div>
-
-        <div class="row g-4">
-          <div class="col-lg-8">
-            <section class="community-panel p-4 mb-4" aria-labelledby="active-polls-heading">
-              <div class="d-flex flex-column flex-sm-row justify-content-between align-items-sm-end gap-3 mb-4">
-                <div>
-                  <div class="poll-header-mono" id="active-polls-heading">Active polls</div>
-                  <p class="text-muted small mb-0">Click an option to cast your vote — saved to your browser.</p>
-                </div>
-              </div>
-              <div id="pollList" class="community-polls-list"></div>
-            </section>
-
-            <section class="community-panel p-4" aria-labelledby="fan-discussion-heading">
-              <div class="d-flex align-items-center justify-content-between gap-3 mb-4">
-                <div>
-                  <div class="poll-header-mono" id="fan-discussion-heading">Fan discussion</div>
-                  <p class="text-muted small mb-0">Share your thoughts — comments saved locally.</p>
-                </div>
-              </div>
-              <form id="commentForm" class="comment-form mb-4" novalidate>
-                <div class="row g-3 mb-3">
-                  <div class="col-sm-6">
-                    <label for="commentName" class="form-label text-mono small">Your name</label>
-                    <input type="text" class="form-control form-control-dark" id="commentName" required minlength="1" maxlength="40" />
-                    <div class="invalid-feedback">Enter a display name.</div>
-                  </div>
-                  <div class="col-sm-6">
-                    <label for="commentTag" class="form-label text-mono small">Topic tag (e.g. Anime)</label>
-                    <input type="text" class="form-control form-control-dark" id="commentTag" maxlength="25" placeholder="Optional" />
-                  </div>
-                </div>
-                <div class="mb-3">
-                  <label for="commentText" class="form-label text-mono small">What’s on your mind?</label>
-                  <textarea class="form-control form-control-dark" id="commentText" rows="4" required minlength="1" maxlength="300"></textarea>
-                  <div class="invalid-feedback">Enter a message.</div>
-                </div>
-                <button type="submit" class="btn btn-accent btn-lg">Post Comment</button>
-              </form>
-              <div id="commentList" class="comment-list"></div>
-            </section>
-          </div>
-
-          <div class="col-lg-4">
-            <aside class="community-sidebar">
-              <section class="community-panel p-4 mb-4">
-                <div class="sidebar-title">Top contributors</div>
-                <ol class="top-contributors-list list-unstyled mb-0">
-                  <li><span class="contributor-rank">01</span> <span class="contributor-name">@sakura_crafts</span> <span class="contributor-score">2,840</span></li>
-                  <li><span class="contributor-rank">02</span> <span class="contributor-name">@rin_crafts</span> <span class="contributor-score">2,105</span></li>
-                  <li><span class="contributor-rank">03</span> <span class="contributor-name">@eva_pilot_k1</span> <span class="contributor-score">1,890</span></li>
-                  <li><span class="contributor-rank muted">04</span> <span class="contributor-name muted">@moon_princess</span> <span class="contributor-score muted">1,340</span></li>
-                  <li><span class="contributor-rank muted">05</span> <span class="contributor-name muted">@infinity_cos</span> <span class="contributor-score muted">1,180</span></li>
-                </ol>
-              </section>
-
-              <section class="community-panel p-4 mb-4">
-                <div class="sidebar-title">Recent activity</div>
-                <ul class="recent-activity-list list-unstyled mb-0">
-                  <li><span class="text-accent">@sakura_crafts</span> submitted a new cosplay</li>
-                  <li><span class="text-accent">@hokage_fan</span> voted in 2 polls</li>
-                  <li><span class="text-accent">@rin_crafts</span> posted a comment</li>
-                  <li>12 users joined today</li>
-                  <li>New poll added: Best Studio 2026</li>
-                </ul>
-              </section>
-
-              <section class="community-panel p-4">
-                <div class="sidebar-title">Latest comments</div>
-                <ul class="recent-comments-list list-unstyled mb-0">
-                  <li><span class="comment-user">aeva_pilot_k1</span> Comic Fiesta 2026 tickets are going FAST. Grabbed mine this morning!</li>
-                  <li><span class="comment-user">asakura_crafts</span> My Nezuko build got featured in the gallery! Thank you AniVerse community 🙏</li>
-                  <li><span class="comment-user">arin_crafts</span> Ready for the next cosplay meetup — hope to see everyone there.</li>
-                </ul>
-              </section>
-            </aside>
-          </div>
+        <div class="col-6 col-md-4 col-xl-2">
+          <p class="footer-col-title">Navigate</p>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="news.html">News</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="events.html">Events</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-4 col-xl-2">
+          <p class="footer-col-title">Community</p>
+          <ul class="footer-links">
+            <li><a href="community.html">Polls</a></li>
+            <li><a href="community.html">Comments</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-12 col-md-4 col-xl-4">
+          <p class="footer-col-title">About Us</p>
+          <p class="footer-meta mb-0">
+            ANIVERSE is your central hub for anime news, cosplay galleries, events, and a thriving fan community. We
+            connect anime enthusiasts across the region through live discussions, community polls, and exclusive event
+            coverage. Join thousands of fans today.
+          </p>
+          <p class="footer-col-title mt-4">Explore</p>
+          <ul class="footer-links">
+            <li><a href="news.html">Anime catalog</a></li>
+            <li><a href="gallery.html">Cosplay grid</a></li>
+            <li><a href="events.html">Event RSVPs</a></li>
+          </ul>
         </div>
       </div>
-    </main>
+      <p class="footer-copy text-center pt-4 mt-4 mb-0 border-top" style="border-color: var(--border) !important">
+        &copy; 2026 ANIVERSE
+      </p>
+    </div>
+  </footer>
 
-    <footer class="site-footer py-5">
-      <div class="container aniverse-wrap">
-        <div class="row g-4 align-items-start">
-          <div class="col-12 col-xl-4">
-            <div class="footer-brand mb-2">
-              <span class="brand-logo"
-                ><span class="brand-ani">ANI</span><span class="brand-verse">VERSE</span></span
-              >
-            </div>
-            <p class="footer-tagline">
-              Your central hub for anime news, cosplay galleries, events, and community. Powered by passion, built for fans.
-            </p>
-            <p class="footer-col-title mt-4">Follow us</p>
-            <div class="footer-social">
-              <a href="https://twitter.com/intent/tweet?text=ANIVERSE" target="_blank" rel="noopener noreferrer">[ TWITTER / X ]</a>
-              <a href="#">[ INSTAGRAM ]</a>
-              <a href="#">[ DISCORD ]</a>
-              <a href="#">[ YOUTUBE ]</a>
-            </div>
-          </div>
-          <div class="col-6 col-md-4 col-xl-2">
-            <p class="footer-col-title">Navigate</p>
-            <ul class="footer-links">
-              <li><a href="index.html">Home</a></li>
-              <li><a href="news.html">News</a></li>
-              <li><a href="gallery.html">Gallery</a></li>
-              <li><a href="events.html">Events</a></li>
-            </ul>
-          </div>
-          <div class="col-6 col-md-4 col-xl-2">
-            <p class="footer-col-title">Community</p>
-            <ul class="footer-links">
-              <li><a href="community.html">Polls</a></li>
-              <li><a href="community.html">Comments</a></li>
-              <li><a href="contact.html">Contact</a></li>
-            </ul>
-          </div>
-          <div class="col-12 col-md-4 col-xl-4">
-            <p class="footer-col-title">About Us</p>
-            <p class="footer-meta mb-0">
-              ANIVERSE is your central hub for anime news, cosplay galleries, events, and a thriving fan community. We connect anime enthusiasts across the region through live discussions, community polls, and exclusive event coverage. Join thousands of fans today.
-            </p>
-            <p class="footer-col-title mt-4">Explore</p>
-            <ul class="footer-links">
-              <li><a href="news.html">Anime catalog</a></li>
-              <li><a href="gallery.html">Cosplay grid</a></li>
-              <li><a href="events.html">Event RSVPs</a></li>
-            </ul>
-          </div>
-        </div>
-        <p class="footer-copy text-center pt-4 mt-4 mb-0 border-top" style="border-color: var(--border) !important">
-          &copy; 2026 ANIVERSE
-        </p>
-      </div>
-    </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/community.js"></script>
+</body>
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"
-    ></script>
-    <script src="js/storage.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/community.js"></script>
-  </body>
 </html>

@@ -4,14 +4,14 @@
   var STORAGE_KEY = 'animehub_gallery_favorites';
 
   var items = [
-    { id: 'g1', title: 'Violet regalia', img: 'assets/images/gallery-1.webp' },
-    { id: 'g2', title: 'Neon alley', img: 'assets/images/gallery-2.webp' },
-    { id: 'g3', title: 'Moonlit cloak', img: 'assets/images/gallery-3.webp' },
-    { id: 'g4', title: 'Sakura armor', img: 'assets/images/gallery-4.webp' },
-    { id: 'g5', title: 'Cyber kitsune', img: 'assets/images/gallery-5.webp' },
-    { id: 'g6', title: 'Scholar robes', img: 'assets/images/gallery-6.webp' },
-    { id: 'g7', title: 'Storm captain', img: 'assets/images/gallery-7.webp' },
-    { id: 'g8', title: 'Crystal mage', img: 'assets/images/gallery-8.webp' }
+    { id: 'g1', title: 'Cosplay 1', img: 'assets/images/gallery-1.png' },
+    { id: 'g2', title: 'Cosplay 2', img: 'assets/images/gallery-2.png' },
+    { id: 'g3', title: 'Cosplay 3', img: 'assets/images/gallery-3.png' },
+    { id: 'g4', title: 'Cosplay 4', img: 'assets/images/gallery-4.png' },
+    { id: 'g5', title: 'Cosplay 5', img: 'assets/images/gallery-5.png' },
+    { id: 'g6', title: 'Cosplay 6', img: 'assets/images/gallery-6.png' },
+    { id: 'g7', title: 'Cosplay 7', img: 'assets/images/gallery-7.png' },
+    { id: 'g8', title: 'Cosplay 8', img: 'assets/images/gallery-8.png' }
   ];
 
   function getFavorites() {
