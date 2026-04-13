@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="ANIVERSE sign in and sign up page." />
+    <title>Account | ANIVERSE</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;0,9..40,700&family=JetBrains+Mono:wght@400;600;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap"
+        rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <header class="site-header">
+        <nav class="navbar navbar-expand-lg" aria-label="Main navigation">
+            <div class="container aniverse-wrap">
+                <a class="navbar-brand brand-logo" href="index.html"><span class="brand-ani">ANI</span><span
+                        class="brand-verse">VERSE</span></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain"
+                    aria-controls="navMain" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navMain">
+                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0 nav-aniverse">
+                        <li class="nav-item"><a class="nav-link" data-nav href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" data-nav href="news.html">News</a></li>
+                        <li class="nav-item"><a class="nav-link" data-nav href="gallery.html">Gallery</a></li>
+                        <li class="nav-item"><a class="nav-link" data-nav href="events.html">Events</a></li>
+                        <li class="nav-item"><a class="nav-link" data-nav href="community.html">Community</a></li>
+                        <li class="nav-item"><a class="nav-link" data-nav href="contact.html">Contact</a></li>
+                    </ul>
+                    <button type="button" class="btn btn-sm ms-lg-3" id="themeToggle" aria-pressed="false"
+                        aria-label="Switch theme">
+                        <span class="theme-toggle-label">DARK</span>
+                    </button>
+                    <button type="button" class="btn btn-outline-light btn-sm ms-lg-2" id="accountButton"
+                        aria-label="Sign in to your account">Sign in</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main-content" class="py-5 py-lg-6">
+        <div class="container aniverse-wrap">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="auth-panel p-4 rounded-4 shadow-soft bg-dark">
+                        <div
+                            class="d-flex flex-column flex-md-row justify-content-between align-items-start gap-3 mb-4">
+                            <div>
+                                <p class="section-label-mono mb-2 text-muted">Account access</p>
+                                <h1 class="h2 mb-1">Sign in or create your AniVerse account</h1>
+                                <p class="text-muted small mb-0">Your account will allow you to stay signed in and save preferences.</p>
+                            </div>
+                            <div>
+                                <button type="button" class="btn btn-outline-secondary btn-sm me-2 active"
+                                    id="tabSignIn">Sign in</button>
+                                <button type="button" class="btn btn-outline-secondary btn-sm" id="tabSignUp">Sign up</button>
+                            </div>
+                        </div>
+
+                        <div id="authMessage" class="alert d-none"></div>
+
+                        <div id="signedInState" class="d-none">
+                            <div class="alert alert-success">
+                                <p class="mb-2">You are already signed in as <strong class="user-name"></strong>.</p>
+                                <p class="mb-0">Use the sign out button in the top bar to end your session.</p>
+                            </div>
+                        </div>
+
+                        <form id="signInForm" novalidate>
+                            <div class="mb-3">
+                                <label for="signInUsername" class="form-label text-mono small">Username</label>
+                                <input type="text" class="form-control form-control-dark" id="signInUsername"
+                                    placeholder="your username" />
+                            </div>
+                            <div class="mb-3">
+                                <label for="signInEmail" class="form-label text-mono small">Email</label>
+                                <input type="email" class="form-control form-control-dark" id="signInEmail"
+                                    placeholder="you@example.com" />
+                            </div>
+                            <div class="mb-3">
+                                <label for="signInPassword" class="form-label text-mono small">Password</label>
+                                <input type="password" class="form-control form-control-dark" id="signInPassword"
+                                    required placeholder="Enter password" />
+                            </div>
+                            <div class="form-check form-check-dark mb-4">
+                                <input class="form-check-input" type="checkbox" id="signInRemember" />
+                                <label class="form-check-label text-mono small" for="signInRemember">Remember me</label>
+                            </div>
+                            <button type="submit" class="btn btn-accent btn-lg w-100">Sign in</button>
+                        </form>
+
+                        <form id="signUpForm" class="d-none mt-4" novalidate>
+                            <div class="mb-3">
+                                <label for="signUpName" class="form-label text-mono small">Full name</label>
+                                <input type="text" class="form-control form-control-dark" id="signUpName" required
+                                    placeholder="Your name" />
+                            </div>
+                            <div class="mb-3">
+                                <label for="signUpUsername" class="form-label text-mono small">Username</label>
+                                <input type="text" class="form-control form-control-dark" id="signUpUsername" required
+                                    placeholder="Choose a username" />
+                            </div>
+                            <div class="mb-3">
+                                <label for="signUpEmail" class="form-label text-mono small">Email</label>
+                                <input type="email" class="form-control form-control-dark" id="signUpEmail" required
+                                    placeholder="you@example.com" />
+                            </div>
+                            <div class="mb-3">
+                                <label for="signUpPassword" class="form-label text-mono small">Password</label>
+                                <input type="password" class="form-control form-control-dark" id="signUpPassword"
+                                    required placeholder="Choose a password" />
+                            </div>
+                            <div class="mb-3">
+                                <label for="signUpConfirm" class="form-label text-mono small">Confirm password</label>
+                                <input type="password" class="form-control form-control-dark" id="signUpConfirm"
+                                    required placeholder="Repeat your password" />
+                            </div>
+                            <div class="form-check form-check-dark mb-4">
+                                <input class="form-check-input" type="checkbox" id="signUpRemember" />
+                                <label class="form-check-label text-mono small" for="signUpRemember">Remember me on this device</label>
+                            </div>
+                            <button type="submit" class="btn btn-accent btn-lg w-100">Create account</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer py-5">
+        <div class="container aniverse-wrap">
+            <div class="row g-4 align-items-start">
+                <div class="col-12 col-xl-4">
+                    <div class="footer-brand mb-2">
+                        <span class="brand-logo"><span class="brand-ani">ANI</span><span
+                                class="brand-verse">VERSE</span></span>
+                    </div>
+                    <p class="footer-tagline">
+                        Your central hub for anime news, cosplay galleries, events, and community. Powered by passion, built for fans.
+                    </p>
+                </div>
+                <div class="col-6 col-md-4 col-xl-2">
+                    <p class="footer-col-title">Navigate</p>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="news.html">News</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="events.html">Events</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-4 col-xl-2">
+                    <p class="footer-col-title">Community</p>
+                    <ul class="footer-links">
+                        <li><a href="community.html">Polls</a></li>
+                        <li><a href="community.html">Comments</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-4 col-xl-4">
+                    <p class="footer-col-title">About Us</p>
+                    <p class="footer-meta mb-0">
+                        ANIVERSE is your central hub for anime news, cosplay galleries, events, and a thriving fan community. We connect anime enthusiasts across the region through live discussions, community polls, and exclusive event coverage. Join thousands of fans today.
+                    </p>
+                </div>
+            </div>
+            <p class="footer-copy text-center pt-4 mt-4 mb-0 border-top" style="border-color: var(--border) !important">
+                &copy; 2026 ANIVERSE
+            </p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/auth.js"></script>
+</body>
+
+</html>
