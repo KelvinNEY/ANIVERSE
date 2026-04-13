@@ -351,6 +351,18 @@ h6,
   color: #0a7a8a !important;
 }
 
+[data-theme='light'] .btn-outline-light {
+  color: var(--text) !important;
+  border-color: var(--border) !important;
+}
+
+[data-theme='light'] .btn-outline-light:hover,
+[data-theme='light'] .btn-outline-light:focus {
+  color: var(--text) !important;
+  background-color: rgba(15, 15, 18, 0.05);
+  border-color: var(--neon-cyan) !important;
+}
+
 .stats-row .stat-num {
   font-family: var(--font-heading);
   font-weight: 800;
