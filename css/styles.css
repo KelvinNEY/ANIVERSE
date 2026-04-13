@@ -222,6 +222,70 @@ h6,
   color: var(--neon-cyan);
 }
 
+.search-form {
+  min-width: 240px;
+  max-width: 360px;
+}
+
+.search-group .form-control-search {
+  min-width: 0;
+  border-right: 0;
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--text);
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.search-group .form-control-search:focus {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: var(--neon-cyan);
+  box-shadow: none;
+}
+
+.search-group .btn {
+  border-left: 0;
+}
+
+[data-theme='dark'] .search-group .form-control-search {
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.16);
+}
+
+[data-theme='dark'] .search-group .form-control-search::placeholder {
+  color: rgba(255, 255, 255, 0.65);
+}
+
+[data-theme='dark'] .search-group .form-control-search:focus {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+[data-theme='dark'] .search-group .btn {
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.16);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+[data-theme='dark'] .search-group .btn:hover,
+[data-theme='dark'] .search-group .btn:focus {
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+}
+
+[data-theme='light'] .search-group .form-control-search {
+  background: rgba(15, 15, 18, 0.04);
+}
+
+[data-theme='light'] .search-group .btn {
+  color: var(--text);
+  border-color: rgba(15, 15, 18, 0.16);
+}
+
+[data-theme='light'] .search-group .btn:hover,
+[data-theme='light'] .search-group .btn:focus {
+  color: #0d6efd;
+  border-color: rgba(13, 110, 253, 0.3);
+}
+
 /* —— News ticker —— */
 .news-ticker {
   background: var(--neon-pink);
@@ -1264,6 +1328,34 @@ h6,
 .form-select-dark:focus {
   box-shadow: none;
   border-color: var(--neon-cyan);
+}
+
+.auth-panel {
+  background: var(--surface-elevated);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  color: var(--text);
+}
+
+[data-theme='light'] .auth-panel {
+  background: #ffffff;
+  border-color: rgba(13, 110, 253, 0.12);
+}
+
+.auth-panel .form-control-dark,
+.auth-panel .form-select-dark {
+  background: rgba(255, 255, 255, 0.9);
+  color: var(--text);
+}
+
+[data-theme='light'] .auth-panel .form-control-dark,
+[data-theme='light'] .auth-panel .form-select-dark {
+  background: #f5f7ff;
+  border-color: #c8d3e5;
+}
+
+[data-theme='light'] .auth-panel .form-control-dark::placeholder,
+[data-theme='light'] .auth-panel .form-select-dark option {
+  color: rgba(15, 15, 18, 0.45);
 }
 
 .contact-panel {

@@ -132,16 +132,19 @@
         var signUpForm = document.getElementById('signUpForm');
         var signInTab = document.getElementById('tabSignIn');
         var signUpTab = document.getElementById('tabSignUp');
+        var authPanelTitle = document.getElementById('authPanelTitle');
         if (tab === 'signup') {
             if (signInForm) signInForm.classList.add('d-none');
             if (signUpForm) signUpForm.classList.remove('d-none');
             if (signInTab) signInTab.classList.remove('active');
             if (signUpTab) signUpTab.classList.add('active');
+            if (authPanelTitle) authPanelTitle.textContent = 'Create an account';
         } else {
             if (signUpForm) signUpForm.classList.add('d-none');
             if (signInForm) signInForm.classList.remove('d-none');
             if (signUpTab) signUpTab.classList.remove('active');
             if (signInTab) signInTab.classList.add('active');
+            if (authPanelTitle) authPanelTitle.textContent = 'Log in to your account';
         }
         clearAuthMessage();
     }
@@ -285,6 +288,17 @@
         if (tabSignUp) {
             tabSignUp.addEventListener('click', function () {
                 switchAuthTab('signup');
+            });
+        }
+
+        var signinPromptButton = document.getElementById('signinPromptButton');
+        if (signinPromptButton) {
+            signinPromptButton.addEventListener('click', function () {
+                switchAuthTab('signin');
+                var signInTab = document.getElementById('tabSignIn');
+                if (signInTab) {
+                    signInTab.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }
             });
         }
     });

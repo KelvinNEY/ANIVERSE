@@ -37,6 +37,15 @@
                         <li class="nav-item"><a class="nav-link" data-nav href="community.html">Community</a></li>
                         <li class="nav-item"><a class="nav-link" data-nav href="contact.html">Contact</a></li>
                     </ul>
+                    <form class="d-flex align-items-center mb-3 mb-lg-0 ms-lg-3 search-form" action="news.html"
+                        method="get" role="search">
+                        <div class="input-group input-group-sm search-group">
+                            <input type="search" class="form-control form-control-search" id="siteSearchInput" name="q"
+                                placeholder="Search Anime, Manga, and more..." aria-label="Search site">
+                            <button class="btn btn-outline-light" type="submit" aria-label="Submit search"><i
+                                    class="bi bi-search"></i></button>
+                        </div>
+                    </form>
                     <button type="button" class="btn btn-sm ms-lg-3" id="themeToggle" aria-pressed="false"
                         aria-label="Switch theme">
                         <span class="theme-toggle-label">DARK</span>
@@ -52,18 +61,19 @@
         <div class="container aniverse-wrap">
             <div class="row justify-content-center">
                 <div class="col-lg-8">
-                    <div class="auth-panel p-4 rounded-4 shadow-soft bg-dark">
+                    <div class="auth-panel p-4 rounded-4 shadow-soft">
                         <div
                             class="d-flex flex-column flex-md-row justify-content-between align-items-start gap-3 mb-4">
                             <div>
                                 <p class="section-label-mono mb-2 text-muted">Account access</p>
-                                <h1 class="h2 mb-1">Sign in or create your AniVerse account</h1>
+                                <h1 id="authPanelTitle" class="h2 mb-1">Log in to your account</h1>
                                 <p class="text-muted small mb-0">Your account will allow you to stay signed in and save preferences.</p>
                             </div>
                             <div>
                                 <button type="button" class="btn btn-outline-secondary btn-sm me-2 active"
-                                    id="tabSignIn">Sign in</button>
-                                <button type="button" class="btn btn-outline-secondary btn-sm" id="tabSignUp">Sign up</button>
+                                    id="tabSignIn">Log in</button>
+                                <button type="button" class="btn btn-outline-secondary btn-sm" id="tabSignUp">Sign
+                                    up</button>
                             </div>
                         </div>
 
@@ -96,7 +106,7 @@
                                 <input class="form-check-input" type="checkbox" id="signInRemember" />
                                 <label class="form-check-label text-mono small" for="signInRemember">Remember me</label>
                             </div>
-                            <button type="submit" class="btn btn-accent btn-lg w-100">Sign in</button>
+                            <button type="submit" class="btn btn-accent btn-lg w-100">Log in</button>
                         </form>
 
                         <form id="signUpForm" class="d-none mt-4" novalidate>
@@ -130,6 +140,9 @@
                                 <label class="form-check-label text-mono small" for="signUpRemember">Remember me on this device</label>
                             </div>
                             <button type="submit" class="btn btn-accent btn-lg w-100">Create account</button>
+                            <p class="text-muted small text-center mt-3 mb-1">By clicking Create Account, you agree to our Terms and Privacy Policy.</p>
+                            <p class="text-center small mb-0">Already have an account? <button type="button"
+                                    class="btn btn-link p-0 align-baseline" id="signinPromptButton">Login</button></p>
                         </form>
                     </div>
                 </div>
