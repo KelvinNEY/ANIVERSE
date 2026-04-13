@@ -235,6 +235,22 @@ h6,
   transition: background-color 0.2s ease, border-color 0.2s ease;
 }
 
+[data-theme='dark'] .form-control-dark,
+[data-theme='dark'] .form-select-dark {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.22);
+  color: #fff;
+}
+
+[data-theme='dark'] .form-control-dark::placeholder,
+[data-theme='dark'] .form-select-dark option,
+[data-theme='dark'] .form-control-dark::-webkit-input-placeholder,
+[data-theme='dark'] .form-control-dark::-moz-placeholder,
+[data-theme='dark'] .form-control-dark:-ms-input-placeholder,
+[data-theme='dark'] .form-control-dark:-moz-placeholder {
+  color: #000;
+}
+
 .search-group .form-control-search:focus {
   background: rgba(255, 255, 255, 0.15);
   border-color: var(--neon-cyan);
@@ -1343,19 +1359,34 @@ h6,
 
 .auth-panel .form-control-dark,
 .auth-panel .form-select-dark {
-  background: rgba(255, 255, 255, 0.9);
-  color: var(--text);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: #fff;
+}
+
+.auth-panel .form-control-dark::placeholder,
+.auth-panel .form-select-dark option,
+.auth-panel .form-control-dark::-webkit-input-placeholder,
+.auth-panel .form-control-dark::-moz-placeholder,
+.auth-panel .form-control-dark:-ms-input-placeholder,
+.auth-panel .form-control-dark:-moz-placeholder {
+  color: rgba(255, 255, 255, 0.75);
 }
 
 [data-theme='light'] .auth-panel .form-control-dark,
 [data-theme='light'] .auth-panel .form-select-dark {
-  background: #f5f7ff;
-  border-color: #c8d3e5;
+  background: #eef2ff !important;
+  border-color: #c8d3e5 !important;
+  color: #0f0f12 !important;
 }
 
 [data-theme='light'] .auth-panel .form-control-dark::placeholder,
-[data-theme='light'] .auth-panel .form-select-dark option {
-  color: rgba(15, 15, 18, 0.45);
+[data-theme='light'] .auth-panel .form-select-dark option,
+[data-theme='light'] .auth-panel .form-control-dark::-webkit-input-placeholder,
+[data-theme='light'] .auth-panel .form-control-dark::-moz-placeholder,
+[data-theme='light'] .auth-panel .form-control-dark:-ms-input-placeholder,
+[data-theme='light'] .auth-panel .form-control-dark:-moz-placeholder {
+  color: rgba(15, 23, 42, 0.65) !important;
 }
 
 .contact-panel {
