@@ -219,7 +219,7 @@
         '</span>' +
         '<a class="btn btn-sm btn-accent" href="' +
         escapeAttr(item.url) +
-        '" target="_blank" rel="noopener noreferrer">MAL</a>' +
+        '" target="_blank" rel="noopener noreferrer">Read more</a>' +
         '</div></div></article>';
       var img = col.querySelector('img');
       if (item.image) {
